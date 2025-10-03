@@ -16,7 +16,7 @@ fonts:
 mdc: true
 ---
 
-## Blockchain Monetary Policy
+## Staking in Proof-of-Stake blockchains
 
 Fayçal Drissi, Zachary Feinstein, Basil Williams
 
