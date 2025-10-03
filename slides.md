@@ -174,246 +174,282 @@ Centralized / Decentralized staking
 <a name="defi"></a></h1>
 </p>
 
-
 ---
 
-# The model
+# Setup
 
-Two types of stakers: **whales** and **minnows**
-- Initial ETH wealth of minnows: $s_{\text{g}}=s$
-- Initial ETH wealth of whales: $s_{\text{w}}=m\,s$, $\qquad m \ge 1$
+$N$ identical investors
+- Initial ETH wealth $s$
 
-Relative risk aversion: $\gamma$
+The market
+- Staking in the blockchain: $R$
+- outside risk-free option: $r_{\$}\, s$
 
----
-
-# The model
-
-Two stage game
-
-- **Stage one**: Whales and Guppies choose to enter the staking market
-- **Stage two**: Whales and Guppies choose whether to stake in 
-    - the Protocol Pool (PP)
-    - the Liquid Pool (LP)
-- The model is solve by backward induction
-
----
-
-# Stage two
-
-- $N^{\text{g}}$ minnows and $N^{\text{w}}$ whales are in the blockchain (determined endogenously in stage one)
-- define $N$ as the number of equivalent minnows in the blockchain
-$$
-N = s\,N^{\text{w}} + N^{\text{g}}
-$$
-- $s_{\mathcal{P}}$ is the stake in the PP
-- $s_{\mathcal{L}}$ is the stake in the LP
-- The total stake is fixed
-$$s_{\mathcal{L}}+s_{\mathcal{P}}=\overline{S}$$
 
 
 ---
 
-# Stage two
-### Protocol Pool
+# Setup: two pools
+**PP** (protocol pool)
+- liquidity cost $c_P$
+- per‑staker fixed validator overhead $f$
 
-- Let $b$ a Bernoulli variable with parameter 
-    $$\frac{s_{\mathcal{P}}}{s_{\mathcal{L}}+s_{\mathcal{P}}}$$
-    - describes the probability that the protocol chooses a validator from the PP
-- Let $f$ denote the fee for setting up a staking account
-- The staking reward for type $i\in\{\text{g}, \text{w}\}$ in the PP
-$$
-R_{i}^{PP}=b\frac{s_i}{s_{\mathcal{P}}}R-f
-$$
+**LP** (liquid staking): 
+- liquidity cost $c_L$
+- extra mean‑zero risk with variance $\sigma$
+- LIDO proportional fee ($\alpha\in[0,1)$)
 
----
-
-# Stage two
-### Liquid Pool
-
-- Let $\tilde{\sigma}$ be a normal rv with mean zero and std.dev $\sqrt{2\,\sigma}$
-    - describes the uncertainty around LIDO's return (smart-contract risk)
-- Let $\alpha$ be the performance fee taken by the LP
-- The staking reward for type $i\in\{\text{g}, \text{w}\}$ in the LP
-$$
-R_{i}^{LP}=(1-b)\frac{s_i}{s_{\mathcal{L}}}\left(1-\alpha\right)R-\tilde{\sigma}
-$$
 
 
 ---
 
-# Stage two
-### Protocol Pool
+# Timeline 
 
-- For any concave utility $u$, and for type $i\in\{\text{g}, \text{w}\}$ in the PP we have 
+**Stage 1**: blockchain posts reward $R$ to maximize a security objective.
+
+**Stage 2**: given $R$, LIDO posts fee $\alpha$.
+
+**Stage 3**: given $R$ and $\alpha$, $N$ stakers decide to enter versus outside option ($r_{\$} s$).
+
+**Stage 4**: Given $N$, stakers split across PP and LP.
+
+
+---
+
+# Stage 4 - LP versus PP
+
+Let $s_P=s\,N_P$, $\quad s_L=s\,N_L$, $\quad S=s_P+s_L=s(N_P+N_L)=sN$.
+
+* Pool selection indicator
+
+$$b\sim \text{Bernoulli}\big(\tfrac{s_P}{S}=\tfrac{N_P}{N}\big)$$
+
+**PP per‑staker payoff**
+$$R_{PP}= b\,\frac{s}{s_P} R - c_P - f = b\,\frac{R}{N_P} - c_P - f.$$
+
+**LP per‑staker payoff**
+$$R_{LP} = (1-b)(1-\alpha)\,\frac{s}{s_L} R - c_L - \tilde\sigma$$
+$$\mathbb E[\tilde\sigma]=0,\ \mathrm{Var}(\tilde\sigma)=\sigma.$$
+
+---
+
+# Stage 4 - expected utility
+
+The utility of a staker
+
 $$
 \begin{split}
-\mathbb{E}\left[u\left(s_{i}+R_{i}^{PP}\right)\right]=&\frac{s_{\mathcal{L}}}{s_{\mathcal{L}}+s_{\mathcal{P}}}u\left(s_{i}-f\right)+\frac{s_{\mathcal{P}}}{s_{\mathcal{L}}+s_{\mathcal{P}}}u\left(s_{i}+\frac{s}{s_{\mathcal{P}}}R-f\right)\\=&\left(1-\frac{s_{\mathcal{P}}}{\overline{S}}\right)u\left(s_{i}-f\right)+\frac{s_{\mathcal{P}}}{\overline{S}}u\left(s_{i}+\frac{s}{s_{\mathcal{P}}}R-f\right)
+J_{L}\left(s_{L},s_{P}\right)= & \frac{s_{L}}{S}\mathbb{E}_{\tilde{\sigma}}\left[u\left(s+\left(1-\alpha\right)R\frac{s}{s_{L}}-c_{L}-\sigma\right)\right]+\frac{s_{P}}{S}\mathbb{E}_{\tilde{\sigma}}\left[u\left(s-c_{L}-\sigma\right)\right]\\
+J_{P}\left(s_{L},s_{P}\right)= & \frac{s_{P}}{S}u\left(s+R\frac{s}{s_{P}}-c_{P}-f\right)+\frac{s_{L}}{S}u\left(s-c_{P}-f\right)
 \end{split}
 $$
 
-- So 
+---
+
+# Stage 4 - expected utility
+
+The utility of a staker
+
 $$
 \begin{split}
-\partial_{s_{\mathcal{P}}}\mathbb{E}\left[u\left(s+R_{i}^{PP}\right)\right]=&-\frac{1}{\overline{S}}u\left(s_{i}-f\right)+\frac{1}{\overline{S}}u\left(s_{i}+\frac{s}{s_{\mathcal{P}}}R-f\right)-\frac{s\,R}{s_{\mathcal{P}}}\frac{1}{\overline{S}}\,u'\left(s_{i}+\frac{s}{s_{\mathcal{P}}}R-f\right)\\\le&0
+J_{L}\left(s_{L},s_{P}\right)= & \frac{s_{L}}{S}\mathbb{E}_{\tilde{\sigma}}\left[u\left(s+\left(1-\alpha\right)R\frac{s}{s_{L}}-c_{L}-\sigma\right)\right]+\frac{s_{P}}{S}\mathbb{E}_{\tilde{\sigma}}\left[u\left(s-c_{L}-\sigma\right)\right]\\
+J_{P}\left(s_{L},s_{P}\right)= & \frac{s_{P}}{S}u\left(s+R\frac{s}{s_{P}}-c_{P}-f\right)+\frac{s_{L}}{S}u\left(s-c_{P}-f\right)
 \end{split}
 $$
-by concavity $u'\left(x+a\right)\le\frac{u\left(x+a\right)-u\left(x\right)}{a}$
 
 
 ---
 
-# Stage two
-### Equilibrium 
+# Stage 4 - Strategic complementarity
+
+For any concave $u$
+$$
+\begin{split}
+J_{P}\left(s_{L},s_{P}\right)=&\frac{s_{P}}{s_{L}+s_{P}}u\left(s-c_{P}-f+\frac{s}{s_{P}}R\right)+\frac{s_{L}}{s_{L}+s_{P}}u(\underbrace{s-c_{P}-f}_{=\xi})\\=&\frac{s_{P}}{S}u\left(\xi+\frac{s}{s_{P}}R\right)+\left(1-\frac{s_{P}}{S}\right)u\left(\xi\right)
+\end{split}
+$$
+
+Using concavity (tangent line inequality)
 
 $$
-\partial_{s_{\mathcal{P}}}\mathbb{E}\left[u\left(s+R_{i}^{PP}\right)\right]\le0
+\partial_{s_{P}}\mathbb{E}\left[u\left(s+R_{i}^{PP}\right)\right]=\frac{1}{S}\left[u\left(\xi+\frac{s}{s_{P}}R\right)-u\left(\xi\right)-\frac{s}{s_{P}}R\,u'\left(\xi+\frac{s}{s_{P}}R\right)\right] \ge 0
 $$
 
-- Strategic complementarity
-- Any pure equilibrium is type-monotone
-    - There is no interior pure Nash: at any interior split one side has a profitable deviation
-- The same holds for LP
+> Payoff rises as the pool grows ⇒ **all‑PP or all‑LP**.
+
 
 ---
 
-# Stage two
-### Pratt’s approximation - risk premium
+# Stage 4 - expected utility
 
-- Assume CRRA utility with aversion $\gamma$
-- The (maximum) blockchain reward does not scale with the wealth
-$$
-\mathbb{E}\left[\frac{\left(s_{i}+\tilde{R}\right)^{1-\gamma}}{1-\gamma}\right]=\frac{s_{i}^{1-\gamma}}{1-\gamma}\mathbb{E}\left[\left(1+\tilde{R}/s_{i}\right)^{1-\gamma}\right]
-$$
+Assume $\rho$ is the relative risk aversion of stakers.
 
-- The risk premium depends on the size of the reward relative to the initial wealth
-- We use Pratt’s approximation of the risk premium for both types
+Pratt's approximation:
+
 $$
-\begin{cases}
-J^{PP,i}\left(s_{\mathcal{L}},s_{\mathcal{P}}\right) & =\mathbb{E}\left[u\left(s_{i}+R^{PP,\text{w}}\right)\right]\approx\mathbb{E}\left[R^{PP,i}\right]-\gamma^{i}\mathbb{V}\left[R_{i}^{PP,i}\right]\\
-J^{LP,i}\left(s_{\mathcal{L}},s_{\mathcal{P}}\right) & =\mathbb{E}\left[u\left(s_{i}+R^{LP,\text{g}}\right)\right]\approx\mathbb{E}\left[R^{LP,i}\right]-\gamma^{i}\mathbb{V}\left[R^{LP,i}\right]-\gamma^{i}\,\sigma
-\end{cases}
+\begin{split}
+J_{L}\left(s_{L},s_{P}\right)=&s+\left(1-\alpha\right)\frac{R}{N}-C_L-\gamma\,\left(1-\alpha\right)^{2}\frac{R^{2}}{N^{2}}\frac{s_{P}}{s_{L}}\\J_{P}\left(s_{L},s_{P}\right)=&s+\frac{R}{N}-C_P-\gamma\,\frac{R^{2}}{N^{2}}\frac{s_{L}}{s_{P}}
+\end{split}
 $$
 where 
+$$C_P = c_P + f, \qquad C_L := c_L + \gamma\,\sigma, \qquad \gamma=\rho/2s$$
+
+<!--
+
+# Stage 4 — Dominant‑Corner Comparison
+
+If all‑LP: $s_L=S, s_P=0$
+$$\mathbb E[u(s+R_{LP})]= \mathbb E_{\tilde\sigma}\,\left[u\,\left(s+(1-\alpha)\tfrac{R}{N}-c_L-\tilde\sigma\right)\right].$$
+
+If all‑PP: $s_P=S, s_L=0$
+$$\mathbb E[u(s+R_{PP})]= u\,\left(s+\tfrac{R}{N}-c_P-f\right).$$
+
+
+With Pratt CE: **LP dominates PP** iff
+$$\boxed{\ \alpha R;\le; N\big[c_P+f-(c_L+\gamma\sigma)\big]\ }.$$
+-->
+
+---
+
+# Stage 4 - dominant equilibrium
+
+If all‑LP: $s_L=S, s_P=0$
+$$J_{L}\left(S,0\right)= s+\left(1-\alpha\right)\frac{R}{N}-C_{L}.$$
+
+If all‑PP: $s_P=S, s_L=0$
+$$J_{P}\left(0,S\right)= s+\frac{R}{N}-C_{P}.$$
+
+
+**LP dominates PP** iff
+$$\boxed{C_{P}-\alpha\frac{R}{N}\ge C_{L} }$$
+
+---
+
+# Stage 4 - pure‑Nash (one‑deviator) conditions
+
+
+**All‑LP is Nash** iff
 $$
-\gamma^i = \gamma / s_i
+J_{P}\left(S-s,s\right)-J_{L}\left(S,0\right) \le 0
+$$
+or equivalently
+$$\boxed{\ \alpha\tfrac{R}{N}+C_L-C_P-\gamma\tfrac{N-1}{N^2}R^2\ \le 0\ }.$$
+
+**All‑PP is Nash** iff
+$$J_{L}\left(s,S-s\right)-J_{P}\left(0,S\right)$$
+or equivalently
+$$\boxed{\ -\alpha\tfrac{R}{N}-C_L+C_P-\gamma(1-\alpha)^2\tfrac{N-1}{N^2}R^2\ \le 0\ }.$$
+
+As $N\to\infty$: conditions collapse to 
+$$C_L-C_P\le \ge 0$$ 
+
+---
+
+# Stage 4 - comparative statics
+
+* Higher **$\alpha$** → tilts toward **PP**.
+* Higher **$\sigma$** (LP idiosyncratic risk) → toward **PP**.
+* Higher **$N$** → smaller proposer‑luck variance → both corners easier to sustain.
+* Higher **$R$** → larger mean gaps ($\propto \alpha R/N$) **and** larger risk penalties $(\propto R^2$).
+
+---
+
+# Stage 3 - entry to staking
+
+- If the **all‑LP equilibrium** condition holds, entry is pinned by
+
+$$(1-\alpha)\tfrac{R}{N}-C_L = r_{\$} s 
+\quad\Rightarrow\quad
+\boxed{N_L=\dfrac{(1-\alpha)R}{r_{\$} s + C_L } }.$$
+
+- Then the **all‑LP equilibrium** condition becomes
+
+$$\boxed{\ \frac{\alpha-\gamma R}{1-\alpha}r_{\$} s+\frac{1-\gamma R}{1-\alpha}C_L-c_P-f+\gamma\frac{(r_{\$} s+C_L)^2}{(1-\alpha)^2}\ \le 0\ }$$
+
+---
+
+# Stage 3 - entry to staking
+
+
+- If the **all‑PP equilibrium** condition holds, entry is pinned by
+
+$$C_P+ \tfrac{R}{N}= r_{\$} s
+  \quad\Rightarrow\quad
+  \boxed{\ N_P=\dfrac{R}{r_{\$} s + C_P} }.$$
+  
+- Then the **all‑PP equilibrium** condition becomes
+  
+$$\boxed{-\left(\gamma\,\left(1-\alpha\right)^{2}R+\alpha\right)\,r_{\$}\,s+\left(1-\alpha-\gamma\,\left(1-\alpha\right)^{2}R\right)\left(c_{P}+f\right)-C_{L}+\gamma\,\left(1-\alpha\right)^{2}\left(r_{\$}\,s+C_{P}\right)^{2}\le0 }$$
+  
+
+---
+
+# Stage 2 — LIDO best response $\alpha^{\star}(R)$
+
+- Let $A:=1/(1-\alpha)$
+- The **all‑LP equilibrium** condition is equivalent to the quadratic in $A$:
+$$\gamma\,A^{2}\,\left(r_{\$}\,s+C_{L}\right)^{2}+A\left(1-\gamma R\right)\left(r_{\$}\,s+C_{L}\right)-r_{\$}\,s-C_{P}\le0$$
+
+- Feasible $A$ lie between the two roots. 
+- Since $A$ increases in $\alpha$, LIDO sets **largest feasible** $A$ (hence largest $\alpha$):
+
+$$\boxed{\alpha^{\star}=\min\left\{ \max\left\{ 0,1-\frac{r_{\$}\,s+C_{L}}{2\left(r_{\$}\,s+C_{P}\right)}\left(\left(1-\gamma R\right)+\sqrt{\left(1-\gamma R\right)^{2}+4\gamma\,\left(r_{\$}\,s+C_{P}\right)}\right)\right\} ,1-\epsilon\right\} \in[0,1)}.$$
+
+---
+
+# Stage 2 — LIDO best response $\alpha^{\star}(R)$
+
+**Comparative statistics:** $\alpha^{\star}$ rises in $R$ and $C_P$; falls in $C_L$; non‑monotone in $\gamma$
+
+![issuancecurve](./images/bestResponseLIDO.png){style="transform: translate(0%, 0%); width: 850px"}
+
+
+---
+
+# Stage 1 — blockchain chooses $R$ to favor **PP**
+- Best response $\alpha$ is increasing in $R$ $\implies$  **rule out LP** even if $\alpha=0$: require the **all-LP equilibrium** condition to fail at $\alpha=0$
+$$
+\boxed{R\le r_{\$}\,s+C_{L}-\frac{C_{P}-C_{L}}{\gamma\left(r_{\$}\,s+C_{L}\right)} = R_{\text{kill LP}}}
+$$
+
+- Blockchain **ensures PP** is a Nash: harder at small $R$ and low $\alpha$ $\implies$ must enforce the **all-PP equilibrium** condition at **$\alpha=0$**:
+$$
+\boxed{R\ge\frac{C_{P}-C_{L}}{\gamma\,\left(r_{\$}\,s+C_{P}\right)}+\left(r_{\$}\,s+C_{P}\right)= R_{\text{save PP}}}
 $$
 
 ---
 
-# Stage two
-### Pratt’s approximation - risk premium
+# Stage 1 — blockchain chooses $R$ to favor **PP**
+- Feasible interval exists iff 
+$$R_{\text{save PP}} \le R_{\text{kill LP}}$$
 
-- For a type $i$, the objectives in both pools are
+- Possible only if 
 $$
-\begin{cases}
-J^{PP,i}\left(s_{\mathcal{L}},s_{\mathcal{P}}\right) & =\frac{s_{i}}{\overline{S}}R-f-\gamma^{i}R^{2}\frac{s_{i}^{2}}{\overline{S}^{2}}\frac{s_{\mathcal{L}}}{s_{\mathcal{P}}}\\
-J^{LP,i}\left(s_{\mathcal{L}},s_{\mathcal{P}}\right) & =\frac{s_{i}}{\overline{S}}\left(1-\alpha\right)R-\gamma^{i}\left(1-\alpha\right)^{2}R^{2}\frac{s_{i}^{2}}{\overline{S}^{2}}\frac{s_{\mathcal{P}}}{s_{\mathcal{L}}}-\gamma^{i}\,\sigma
-\end{cases}
+C_{L}>C_{P}
 $$
 
-- We examine the following possible equilibria
-    - all stakers go to LP
-    - all stakers go to PP
-    - whales go to PP, minnows go to LP
-    - whales go to LP, minnows go to PP
-
----
-
-# Stage two
-### Simple case: $m=1$
-
-
----
-
-# Stage two 
-### All stakers go to LP ($\alpha=0$)
-- In this case 
-$$s_{\mathcal{L}}=\overline{S} \quad \text{and} \quad s_{\mathcal{P}}=0$$
-- Deviation of a **minnow** leads to  $\quad s_{\mathcal{L}}=\overline{S}-s \quad \text{and} \quad s_{\mathcal{P}}=s$
-- No deviation if 
-$\qquad\qquad\qquad\quad
-J^{PP,\text{g}}\left(\overline{S}-s,s\right)< J^{LP,\text{g}}\left(\overline{S},0\right)
-$
-- Deviation of a **whale** leads to  $\ \ \ \ s_{\mathcal{L}}=\overline{S}-m\,s \quad \text{and} \quad s_{\mathcal{P}}=m\,s$
-- No deviation if 
-$\qquad\qquad\quad\qquad
-J^{PP,\text{w}}\left(\overline{S}-m\,s,m\,s\right)< J^{LP,\text{w}}\left(\overline{S},0\right)
-$
-- Equilibrium if
+- In this case, blockchain sets $R$ at the **upper end** (maximize PP entrants):
 $$
-\begin{cases}
--f+\gamma^{\text{g}}\,\left(\sigma-R^{2}\frac{N-1}{N^{2}}\right) & < 0\\
--f+\gamma^{\text{w}}\left(\sigma-R^{2}m\,\frac{N-m}{N^{2}}\right) & < 0
-\end{cases}\quad  \underrightarrow{N\rightarrow\infty} \quad f>\gamma^{\text{g}}\sigma
+R^\star = R=r_{\$}\,s+C_{L}+\frac{C_{L}-C_{P}}{\gamma\left(r_{\$}\,s+C_{L}\right)}
+$$
+$$
+N_{P}^\star=\frac{r_{\$}\,s+C_{L}}{r_{\$}\,s+C_{P}}+\frac{C_{L}-C_{P}}{\gamma\left(r_{\$}\,s+C_{L}\right)\left(r_{\$}\,s+C_{P}\right)}
 $$
 
 ---
 
-# Stage two 
-### All stakers go to PP ($\alpha=0$)
+# Takeaways
 
-- In this case 
-$$s_{\mathcal{P}}=\overline{S} \quad \text{and} \quad s_{\mathcal{L}}=0$$
-- Deviation of a **minnow** leads to  $\quad s_{\mathcal{P}}=\overline{S}-s \quad \text{and} \quad s_{\mathcal{L}}=s$
-- No deviation if 
-$\qquad\qquad\qquad\quad
-J^{PP,\text{g}}\left(s,\overline{S}-s\right)< J^{LP,\text{g}}\left(0,\overline{S}\right)
-$
-- Deviation of a **whale** leads to  $\ \ \ \ s_{\mathcal{P}}=\overline{S}-m\,s \quad \text{and} \quad s_{\mathcal{L}}=m\,s$
-- No deviation if 
-$\qquad\qquad\quad\qquad
-J^{PP,\text{w}}\left(m\,s,\overline{S}-m\,s\right)< J^{LP,\text{w}}\left(0,\overline{S}\right)
-$
-- Equilibrium if
-$$
-\begin{cases}
-f & \le\gamma^{\mathrm{g}}\!\left(\sigma+\frac{R^{2}}{N^{2}}(N-1)\right)\\
-f & \le\gamma^{\mathrm{w}}\!\left(\sigma+\frac{R^{2}}{N^{2}}\,m(N-m)\right)
-\end{cases}\quad  \underrightarrow{N\rightarrow\infty} \quad f\le\gamma^{\mathrm{w}}\!\sigma
-$$
-
-
----
-
-# Stage two 
-### Whales in LP, minnows in PP  ($\alpha=0$)
-
-- No minnow wants to move PP$\to$LP and no whale wants to move LP$\to$PP iff
-
-$$
-\begin{cases}
-f\; & \ge\;\gamma^{\mathrm{g}}\!\left(\frac{R^{2}}{N^{2}}-\frac{R^{2}}{N^{2}}\frac{N^{\mathrm{g}}-1}{N^{\mathrm{g}}+1}-\sigma\right)\\
-f\; & \le\;\gamma^{\mathrm{w}}\!\left(\sigma+\frac{m^{2}R^{2}}{N^{2}}\frac{2}{N^{\mathrm{w}}+1}\right)
-\end{cases}
-$$
-
----
-
-# Stage two 
-### Whales in PP, minnows in LP  ($\alpha=0$)
-
-- No minnow wants to move PP$\to$LP and no whale wants to move LP$\to$PP iff
-
-$$
-\begin{cases}
-f\; & \ge\;\gamma^{\mathrm{w}}\!\left(\frac{R^{2}}{N^{2}}-\frac{R^{2}}{N^{2}}\frac{N^{\mathrm{g}}-1}{N^{\mathrm{g}}+1}-\sigma\right)\\
-f\; & \le\;\gamma^{\mathrm{g}}\!\left(\sigma+\frac{m^{2}R^{2}}{N^{2}}\frac{2}{N^{\mathrm{w}}+1}\right)
-\end{cases}
-$$
-
----
-
-# Stage one 
-- Stakers decide whether to invest in a risk-free asset $r^\$$ or enter the blockchain
-- 
+* Strategic complementarity → corner outcomes (all‑LP or all‑PP).
+* LIDO’s best response $\alpha^{\star}(R)$ increases with $R$; larger $R$ lets LIDO charge more.
+* To secure **PP only**, the chain must pick $R$ in a band which exists iff LP is sufficiently costly/risky relative to PP.
 
 
 ---
 
 <br /><br /><br /><br /><br /><br />
 <p style="text-align: center;"><h1>
-Is staking worth anything ? <a name="defi"></a></h1>
+Is staking worth anything ? a macro model <a name="defi"></a></h1>
 </p>
 
 
