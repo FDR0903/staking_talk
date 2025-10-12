@@ -665,8 +665,6 @@ https://notes.ethereum.org/bW2PeHdwRWmeYjCgCJJdVA
 section: Conclusion
 ---
 
-
-
 # Decentralized pools are cool
 
 **PP** (protocol pool)
@@ -683,13 +681,15 @@ section: Conclusion
 
 # Decentralized pools are cool 
 
-**Stage 1**: blockchain posts reward $R$ to maximize a security objective.
+**PP** (protocol pool)
+- liquidity cost $c_P$
+- per‑staker fixed validator overhead $f$
 
-**Stage 2**: given $R$, LIDO posts fee $\alpha$.
+**LP** (liquid staking): 
+- liquidity cost $c_L$
+- extra mean‑zero risk with variance $\sigma$
+- LIDO proportional fee ($\alpha\in[0,1)$)
 
-**Stage 3**: given $R$ and $\alpha$, $N$ stakers decide to enter versus outside option ($r_{\$} s$).
-
-**Stage 4**: Given $N$, stakers split across PP and LP.
 
 
 ---
