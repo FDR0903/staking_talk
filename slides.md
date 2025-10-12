@@ -126,6 +126,7 @@ $$
 - Let pool LS$_1$ have stake $s_1$, LS$_2$ stake $s_2$, total $S=s_1+s_2$.
 - A staker with individual stake $s_0$ who joins LS$_1$ receives
 
+<!--
 $$R_{LS_1}=\begin{cases}
 (1-\alpha)\,\dfrac{s_0}{s_1}\,R - c, & \text{with prob. } \dfrac{s_1}{S}\\[4pt]
 -\,c, & \text{with prob. } \dfrac{s_2}{S}
@@ -146,6 +147,8 @@ u\!\left(\xi+\frac{a}{s_1}\right)-u(\xi)
 -\frac{a}{s_1}\,u'\!\left(\xi+\frac{a}{s_1}\right)\;\ge\;0,$$
 
 - solo staking ($s_1=s_0$) is strictly dominated by joining any larger LS pool
+
+-->
 
 ---
 
