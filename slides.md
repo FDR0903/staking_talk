@@ -200,7 +200,7 @@ section: Productivity / security
 
 <v-click>
 
-* Blockchain issuance is public $\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad dI_t^e/I_t^e$
+* Blockchain issuance is exogenous $\qquad\qquad\qquad\qquad\qquad\qquad\qquad dI_t^e/I_t^e$
 
 <v-click>
 
@@ -231,7 +231,7 @@ section: Productivity / security
 
 # USD returns
 
-### Staking
+### Returns to staking
 1. staking reward (issuance)
 2. USD losses due to slashing
 3. price/holdings adjustment
@@ -240,7 +240,7 @@ $$
 $$
 <v-click>
 
-### DeFi
+### Returns to DeFi
 1. productivity / adoption
 2. financial / technological / demand risk
 3. price/holdings adjustment (issuance, slashing)
@@ -256,7 +256,9 @@ $$
 
 * Example: initially $P=1$, stakers hold $1$ ETH, DeFi users hold $1$ ETH (total USD wealth = $2$)
 * Protocol issues $1$ ETH to stakers: total ETH = $3$ 
-* Price adjusts to $2/3$
+* Price adjusts to $\$ 2 / {\footnotesize\text{ETH}}\,3$
+
+<v-click>
 
   $\implies$ stakers hold 2 ETH worth $4/3$
 
@@ -277,10 +279,11 @@ $$
 * Combined effect of issuance and price response is a wealth transfer, not net creation.
 
 </v-click>
+</v-click>
 
 ---
 
-# Laws of motion
+# Dynamics
 
 * Blockchain productivity/adoption creates USD wealth:
 $$
@@ -472,9 +475,10 @@ Users take as given
 
 <br><br><br>
 
-### Laws of motion $\rightarrow$ equilbrium
+### Dynamics $\rightarrow$ equilbrium
+<u>**[ADD USD returns to DEFI/Staking without LSTS]**</u>
 
-- Dollar returns to LS DeFi: $\qquad \qquad\qquad \qquad\underbrace{\mu^{\$}\,dt}_{\text{adoption \& productivity}}+\underbrace{\sigma^{\$}\,dZ_{t}}_{\text{global risk}}$
+- Dollar returns to LS DeFi: $\qquad \qquad\qquad \qquad\qquad \qquad \underbrace{\mu^{\$}\,dt+\sigma^{\$}\,dZ_{t}}_{\text{productivity rate}}$
 - Dollar returns to staking: <u>**zero**</u>
 
 
@@ -496,13 +500,13 @@ $$
 
 # Consequences
 
-- Issuance is ineffective to control security, productivity, adoption, etc.
+- Issuing ETH as reward to staking no longer affects the incentives to stakeing/DeFi.
 
-
-
-- **Centralisation**: stake at the hand of liquid staking protocols
+- **Centralisation**: stake at the hand of liquid staking protocols.
 
 <!--
+
+The classical tradeoff evaporates
 
 - Issuance can be effective to control ETH prices (volatility)
 
@@ -567,13 +571,13 @@ The general problem <a name="defi"></a></h1>
 
 # Today
 
-* Agents can be productive with LSTs and ETH
+* Users can be productive with LSTs and ETH
 <br>
 <br>
 
 <v-click>
 
-* Agents allocate wealth across:
+* Users allocate wealth across:
   * Consumption (USD)
   * DeFi (with LSTs)
   * DeFi (with ETH)
@@ -610,7 +614,7 @@ $$
 $$
 \qquad\qquad\qquad\qquad\qquad\swarrow
 $$
-- DeFi with LSTs $\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad \text{issuance}$
+- Staking with LSTs $\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad \text{issuance}$
 
 <!-- +\underbrace{\gamma\frac{S_{t}}{P_{t}\,Q_{t}}dN_{t}}_{\text{deflation}}
  -->
