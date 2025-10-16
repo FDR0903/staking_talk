@@ -22,6 +22,10 @@ date: '16/10/2025' # shows in infoLine, defaults to the current date
 mdc: true
 ---
 
+## These slides:  [faycaldrissi.com/staking_talk/](https://www.faycaldrissi.com/staking_talk/)
+
+<br>
+
 # Macroeconomics of liquid staking
 
 ## Fayçal Drissi, Zachary Feinstein, Basil Williams
