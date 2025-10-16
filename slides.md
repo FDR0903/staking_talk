@@ -22,7 +22,7 @@ date: '19/09/2025' # shows in infoLine, defaults to the current date
 mdc: true
 ---
 
-# Macroeconomics of liquid staking in proof-of-stake blockchains
+# Macroeconomics of liquid staking
 
 ## Fayçal Drissi, Zachary Feinstein, Basil Williams
 
@@ -37,104 +37,21 @@ mdc: true
 section: Motivation
 ---
 
-<!--# Issuance, staking, and DeFi
-
-
-- **Blockchains** are distributed digital ledgers that **securely** store and execute transactions 
-<v-click>
-
-- **Staking**: locking Eth in the blockchain to participate in the protocol: secure block production and validation
-<v-click>
-
-- **Issuance**: rewards distributed by the protocol to incentivize staking
-<v-click>
-
-- These rewards are minted as new tokens and given to network participants who conduct consensus duties
-<v-click>
-
-- **Burn**: gas fees are burned to use the blockchain
-  $$\text{total supply of ETH} = \text{issuance} - \text{the burn (EIP-1559)}$$
-<v-click>
-
-- Last 30 days  
-$$78,277.28 \text{ ETH issued} \qquad  8,041.75 \text{ ETH burned}$$
-*Source: ultrasound.money*
-
-</v-click>
-</v-click>
-</v-click>
-</v-click>
-</v-click> -->
-
-
-<!--
-# Issuance, staking, and DeFi
-### Timeline of issuance
-
-* **Jul 2015** Genesis: block reward set to 5 ETH (PoW miners were rewarded for producing blocks)
-* **Oct 2017** Byzantium (EIP-649): block reward reduced to 3 ETH
-* **Feb 2019** Constantinople (EIP-1234): block reward reduced to 2 ETH
-* **Sep 2022** The Merge: Ethereum issuance is now only from PoS rewards (not withdrawable)
-* **Apr 2023** Shanghai/Capella (EIP-4895): Withdrawals to the execution layer
-
-
-# Issuance, staking, and DeFi
-### Today
-
-* Since the beacon chain: issuance is determined by an **issuance curve**
-*  parameterized curve that calculates the *yield* as a function of the amount of ETH staked
-$$
-\text{yield} = \frac{2.6 \cdot 64}{\sqrt{\text{staked ETH}}}
-$$
-
-![issuancecurve](./images/issuancecurve.png){style="transform: translate(40%, 0%); width: 450px"}
-
-
-# Issuance, staking, and DeFi
-### Rationale
-- Aim for 3.3% yield with 30 million ETH staked
-- highly incentivizing at least 10 million staked ETH
-
-![issuancecurve](./images/issuancecurve.png){style="transform: translate(60%, 0%); width: 400px"}
-
-* **Issuance** in a blockchain is similar to **traditional monetary policy**
-
-
-# Issuance, staking, and DeFi
-### Today: staking high
-
-- June 2025: 35 out 120 million ETH staked (88.6 bn $); stake rate of $28.24\%$
-![stakinghistory](./images/stakinghistory.png){style="transform: translate(5%, 0%); width: 800px"}
-
-
-
-#  Research questions
-- What are the equilibrium levels of staking and blockchain adoption ?
-- Can equilibrium outcomes be controlled by the blockchain ? 
--  Can the Ethereum Foundation (EF) target objectives such as the volatility of the native token, economic security, and blockchain adoption ?
-<br>
-
--->
-
-
-# Fact #1: LSTs enable DeFi access
+# Introduction
 
 ### How liquid staking works
 
-- <u>**Deposit assets**</u>: Users lock tokens in a liquid staking protocol (ETH, SOL)
+- <u>**Deposit assets**</u>: users lock tokens in a liquid staking protocol (ETH, SOL)
 - <u>**Receive the derivative token**</u>: protocol issues a token (stETH) that represents the staked assets
 - <u>**Earn rewards**</u>: staking reward increases the value of the derivative token
-- <u>**Utilise derivative token**</u>: in a variety of DeFi applications
-  - AMM pools for stETH
-  - Aave Interest Bearing STETH (ASTETH): earn staking rewards on staked ETH while using it as collateral to borrow other assets
-- *Examples*: Lido, Rocket pool, Ankr, Marinade Finance (Solana)
+- <u>**Examples**</u>: Lido, Rocket pool, Ankr, Marinade Finance (Solana)
 
 <br>
 
 <v-click>
 
 ### Benefits: 
-  - Assets remain accessible for DeFi use
+  - No opportunity costs: assets remain accessible for DeFi use
   - Better economic security
 
 </v-click>
@@ -143,10 +60,13 @@ $$
 
 
 # Fact #1: LSTs enable DeFi access
+Users utilise LSTs in DeFi applications: AMM pools (stETH), Aave Interest Bearing STETH  (stETH as collateral to borrow  assets)
+<br>
+<br>
 
 ![LIDO stETH issuance](./images/LIDOsteth.png){style="transform: translate(15%, -10%); width: 350px"}
 ![Rocket Pool LST](./images/RocketPoolLST.png){style="transform: translate(125%, -110%); width: 350px"}
-![Binance LST](./images/BinanceLST.png){style="transform: translate(75%, -100%); width: 350px"}
+![Binance LST](./images/BinanceLST.png){style="transform: translate(75%, -105%); width: 350px"}
 
 
 ---
@@ -165,11 +85,6 @@ $\implies$ liquid staking dominates solo staking
 
 </v-click>
 
-<!-- 
-joining a pool reduces the reward risk
-
--->
-
 
 ---
 
@@ -178,7 +93,7 @@ joining a pool reduces the reward risk
 
 <p style="text-align: center;"><h3> <u>Question</u> <br>
 
-What are the effects of liquid staking on the macroeconomics of PoS blockchains ?
+What are the effects of liquid staking on the macroeconomics of blockchains ?
 </h3>
 </p>
 
@@ -186,23 +101,21 @@ What are the effects of liquid staking on the macroeconomics of PoS blockchains 
 
 <br>
 <br>
+<br>
 
-<p style="text-align: center;"><h3> <u>Answer</u> <br>
+<p style="text-align: center;"><h3> <u>Some answers</u> <br>
 
 LSTs eliminate the tension between staking and DeFi
 <br>
 
-Natural forces will migrate productivity from native ETH to LSTs
+Natural forces will migrate DeFi from native ETH to LSTs
 <br>
 
-Issuance may no longer affect user incentives
+Issuing (or slashing) Eth would no longer affect user incentives
+
 </h3>
 </p>
 
-<!--
-The blockchain relies on the tension between security and productivity, and issuance is a tax on productive users for security, and issuance policy is a way of calibrating this issuance to specific objectives. We show in this work that introducing liquid staking tokens fundamentally changes the macroeconomics of a blockchain. LSTs will give users a way to stay productive in DeFi while avoiding the staking tax. When LSTs offer the same opportunities as ETH, or when issuance taxes too heavily, then over time, users naturally migrate from native ETH to LSTs. All ETH ends up staked through LSTs. In that world, issuance no longer affects outcomes.
-
-The blockchain rests on a fundamental tension between security and productivity. Issuance is effectively a tax on productive users to pay for security, and the issuance policy is how the protocol calibrates that trade-off. What we show in this work is that introducing liquid staking tokens changes this macroeconomic balance. LSTs let users be productive in DeFi while avoiding the issuance tax. We show that when LSTs provide the same opportunities as ETH, when issuance taxes productivity too heavily, or when too many users stake, users naturally migrate from native ETH to LSTs to avoid the tax. Eventually, all ETH becomes staked through LSTs, and in that world, issuance no longer affects real outcomes.  -->
 
 </v-click>
 
@@ -214,7 +127,6 @@ section: Productivity / security
 # **Blockchain economy**
 
 * Small open economy with continuum of homogeneous users (mass one).
-<!--* Initial wealth / market cap of ETH $x_0 = Q_0\,P_0$ in USD.-->
 * Consumption good normalized to $1$ USD.
 
 <v-click>
@@ -236,62 +148,31 @@ $$E_0\int_0^{\infty} e^{-\beta\,t}\,\log(c_t)\,dt$$
   3. Staking
 
 
-<!--[DELETE]
-
-- Users take as given 
-  1. $P_t$: price of ETH
-  2. $Q_t$: supply of ETH
-  3. $S_t$: aggregate USD value of staked ETH
-  4. $D_t$: aggregate  USD value of productive ETH -->
-
-
 </v-click>
 </v-click>
 </v-click>
 
-
-<!--# USD returns
-
-[DELETE]
-
-### Returns to staking
-1. staking reward (issuance)
-2. USD losses due to slashing
-3. price/holdings adjustment
-$$
-\underbrace{dI_{t}^{\$}/I_{t}^{\$}}_{\text{issuance}}-\underbrace{\gamma\,dN_{t}}_{\text{slashing}}+\text{adjustment}
-$$
-<v-click>
-
-### Returns to DeFi
-1. productivity / adoption
-2. financial / technological / demand risk
-3. price/holdings adjustment (issuance, slashing)
-$$
-\underbrace{\mu^{\$}\,dt+\sigma^{\$}\,dZ_{t}}_{\text{productivity rate}}+\text{adjustment}
-$$
-
-</v-click>-->
 
 ---
 
 # Issuance / slashing
 
 ### Example
-* Initially $P=1$, stakers hold $1$ ETH, DeFi users hold $1$ ETH (total USD wealth = $2$)
-* Protocol issues $1$ ETH to stakers: total ETH = $3$ 
-* Price adjusts to $\$ 2 / {\footnotesize\text{ETH}}\,3$
+* $P=1\,\$/\footnotesize\text{ETH}$. Supply $2\, \footnotesize\text{ETH}$ $\implies$ market cap of ETH = $\$\,2.$
+* Stakers hold $1$ ETH, DeFi users hold $1$ ETH
+* Protocol issues $1$ ETH to stakers $\implies$ Supply = $3 \, \footnotesize\text{ETH}$ 
+$\implies$ Price adjusts to $2\,\$/\footnotesize\text{ETH}$
 <v-click>
 
-  $\implies$ stakers hold 2 ETH worth $4/3$
+  $\implies$ stakers hold 2 ETH worth $\$\,4/3$
 
-  $\implies$ DeFi users 1 ETH worth $2/3$
+  $\implies$ DeFi users 1 ETH worth $\$\,2/3$
 
-  $\implies$ Total market cap = $2$ (unchanged)
+  $\implies$ Total market cap unchanged = $\$\,2$
 
 <v-click>
 
-- **Issuance redistributes USD wealth from ETH holders to stakers, it does not create USD wealth**
+- **Issuance redistributes USD wealth from ETH holders to stakers, it does not create/destroys USD**
 $$
 \boxed{\text{ETH Issuance policy } dI^e_t/I^e_t \equiv \text{USD tax policy } dI^\$_t/I^\$_t}
 $$
@@ -307,112 +188,43 @@ $$
 </v-click>
 </v-click>
 
-
-<!--
-
-# Dynamics
-[TO DELETE]
-
-* Blockchain productivity/adoption creates USD wealth:
-$$
-\underbrace{\frac{d P_tQ_t}{P_tQ_t}}_\text{changes in ETH market cap} = \underbrace{D_t}_\text{productive ETH}\times\underbrace{\left(\mu^{\$}\,dt + \sigma^{\$}\,dZ_t\right)}_\text{productivity rate}
-$$
-<v-click>
-
-* ETH holdings of stakers changes as
-$$
-\underbrace{\frac{dI_t^e}{I_t^e}}_\text{ETH from issuance} - \underbrace{\gamma\,dN_t}_\text{slashing}
-$$
-
-
-<v-click>
-
-* ETH holdings of DeFi users do not change
-
-<v-click>
-
-* Total ETH supply grows with ETH issuance <!--$\qquad\qquad\qquad\qquad\ {dQ_t}/{Q_t}=S_t\,{dI_t^e}/{I_t^e}=S_t\,\left(\mu_{\iota}^{e}\,dt+\sigma_{\iota}^{e}\,dZ_{t}+\gamma_{\iota}^{e}\,dN_{t}\right)$
-
-<v-click>
-
-* Issuance tax = USD wealth transfer determined by "USD issuance" 
-$$\qquad {dI_{t}^{\$}}/{I_{t}^{\$}}=\mu_{\iota}^{\$}\,dt+\sigma_{\iota}^{\$}\,dZ_{t}+\gamma_{\iota}^{\$}\,dN_{t}$$
-
-</v-click>
-</v-click>
-</v-click>
-</v-click>
--->
 ---
 
 # Dollar returns
 
-- Only blockchain productivity creates/destroys USD wealth
+### Governing dynamics
+- Only DeFi creates/destroys USD wealth
 - Staked ETH changes due to issuance/slashing, productive ETH does not
 - Issuance regulates the supply
 
 <v-click>
 
-Dollar return to DeFi: $\qquad \qquad \qquad \qquad \qquad \underbrace{\mu^{\$}\,dt+\sigma^{\$}\,dZ_{t}}_{\text{productivity rate}}-\underbrace{\frac{S_{t}}{D_t+S_t}\frac{dI_{t}^{\$}}{I_{t}^{\$}}}_{\text{issuance tax}}+\underbrace{\gamma\frac{S_{t}}{P_{t}\,Q_{t}}dN_{t}}_{\text{deflation}}$
-
-$$\footnotesize 
-\qquad\qquad\qquad\swarrow\qquad\qquad\qquad \nearrow 
-$$
-
-Dollar return to staking: $\quad \qquad \qquad \qquad \qquad \qquad \qquad  \underbrace{\frac{dI_{t}^{\$}}{I_{t}^{\$}}}_{\text{issuance}}-\underbrace{\gamma\frac{D_{t}}{D_t+S_t}dN_{t}}_{\text{- slashing + deflation}}$
-
-<br>
-
 - $S_t\,$:  USD value of aggregate staked ETH
 - $D_t$:  USD value of aggregate productive ETH
 
 
-</v-click>
-<!-- 
+### Dollar return to DeFi: $\small \qquad \qquad \qquad \qquad \qquad \underbrace{\mu^{\$}\,dt+\sigma^{\$}\,dZ_{t}}_{\text{productivity rate}}-\underbrace{\frac{S_{t}}{D_t}\frac{dI_{t}^{\$}}{I_{t}^{\$}}}_{\text{issuance tax}}+\underbrace{\gamma\frac{S_{t}}{D_t+S_t}dN_{t}}_{\text{deflation}}$
+
 <v-click>
-* Optimal consumption: $\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad  c_t = \beta\,x_t$
-<v-click>
-* In equilibrium $\qquad\qquad\qquad\qquad\qquad x_t = P_t\,Q_t \quad\qquad D_t = \theta_D\,x_t \quad\qquad  S_t = (1-\theta_D)\,x_t$
-* Optimal weights
-$$\small
-\theta=\min\left\{ \max\left\{ 0,\frac{1}{2\,\Delta\gamma\,\Delta\sigma^{2}}\left(\tilde{\delta}+\sqrt{\tilde{\delta}^{2}+4\,\Delta\gamma\,\Delta\sigma^{2}\left(\Delta\mu\left(1+\gamma_{2}\right)+\lambda\,\Delta\gamma+\sigma_{2}\Delta\sigma\left(1+\gamma_{2}\right)\right)}\right)\right\} ,1\right\} 
-$$
-where 
-$$\small
-\Delta\gamma=\gamma-\frac{P_{t}Q_{t}}{D_{t}}\gamma_{\iota}^{\$}\qquad\quad \Delta\mu=\mu^{\$}-c_{D}-\frac{P_{t}Q_{t}}{D_{t}}\mu_{\iota}^{\$}\qquad\quad \Delta\sigma=\sigma^{\$}-\frac{P_{t}Q_{t}}{D_{t}}\sigma_{\iota}^{\$}
-$$
-and
-$$\small
-\tilde{\delta}=\Delta \gamma\,\Delta\mu-\Delta\sigma^{2}\left(1-\gamma_{2}\right)+\sigma_{2}\,\Delta\gamma\,\Delta\sigma
-$$
-# Clearing and equilibrium
-<v-click>
-- The optimal shares solve a fixed point (contraction mapping)
-$$\footnotesize
-\begin{cases}
-\theta & =\min\left\{ \max\left\{ 0,F\left(\theta\right)\right\} ,1\right\} \\
-F\left(\theta\right) & =\frac{1}{2\,\Delta\gamma\,\Delta\sigma{}^{2}}\left(\tilde{\delta}+\sqrt{\tilde{\delta}^{2}+4\,\Delta\gamma\,\Delta\sigma{}^{2}\left(\Delta\mu\left(1+\gamma_{2}\right)+\lambda\,\Delta\gamma+\sigma_{2}\Delta\sigma\left(1+\gamma_{2}\right)\right)}\right)\\
-\tilde{\delta}\left(\theta\right) & =\Delta\gamma\left(\theta\right)\,\Delta\mu\left(\theta\right)-\Delta\sigma\left(\theta\right)^{2}\left(1-\gamma_{2}\right)+\sigma_{2}\,\Delta\gamma\left(\theta\right)\,\Delta\sigma\left(\theta\right)
-\end{cases} \qquad 
-\begin{cases}
-\Delta\gamma\left(\theta\right) & =\gamma-\frac{\gamma_{\iota}^{\$}}{\theta}\\
-\Delta\mu\left(\theta\right) & =\mu^{\$}-c(\theta_t\,P_t\,Q_t)-\frac{\mu_{\iota}^{\$}}{\theta}\\
-\Delta\sigma\left(\theta\right) & =\sigma^{\$}-\frac{\sigma_{\iota}^{\$}}{\theta}\\
-\end{cases}
-$$
+
+### $\footnotesize \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad\swarrow\qquad\qquad\qquad \nearrow$
+
+### Dollar return to staking: $\small \qquad \qquad \qquad \qquad \qquad \qquad  \underbrace{\frac{dI_{t}^{\$}}{I_{t}^{\$}}}_{\text{issuance}}-\underbrace{\gamma\frac{D_{t}}{D_t+S_t}dN_{t}}_{\text{slashing}}$
+
 </v-click>
+
+<br>
+
+
+
+
 </v-click>
-</v-click>
--->
+
+
 
 ---
 
-# Issuance 
-
-<!-- Clearing condition
-$$
-D_{t}+S_{t}=x_{t}=P_{t}\,Q_{t} \qquad\qquad \frac{dQ_{t}}{Q_{t}} = \left(1-\theta_D\right)\left(\frac{dI_{t}^{e}}{I_{t}^{e}}-\gamma\,dN_{t}\right)
-$$ -->
+# Social planning through issuance 
 
 * <u>**Policy tools**</u>: slashing rate $\gamma$, ETH issuance
 $$
@@ -433,61 +245,23 @@ $$\footnotesize
 \begin{cases}
 \text{Drift} & =\underbrace{\theta_{D}\,\mu^{\$}}_{\text{productivity}}-\underbrace{\left(1-\theta_{D}\right)\mu_{\iota}^{e}}_{\text{inflation}}-\underbrace{\beta}_\text{consumption}+\underbrace{\left(1-\theta_{D}\right)\sigma_{\iota}^{e}\left(\left(1-\theta_{D}\right)\sigma_{\iota}^{e}-\theta_{D}\,\sigma^{\$}\right)}_{\text{covariance issuance/defi}}\\
 \\\text{Productivity shocks}  & =\underbrace{\theta_{D}\,\sigma^{\$}}_{\text{DeFi risk}}-\underbrace{\left(1-\theta_{D}\right)\sigma_{\iota}^{e}}_{\text{issuance}}\\
-\\\text{slashing shocks} & =\underbrace{\gamma\,\frac{1-\theta_{D}}{1+\left(1-\theta_{D}\right)\left(\gamma_{\iota}^{e}-\gamma\right)}}_{\text{\text{slashing (deflation) + issuance}}}-\underbrace{\gamma_{\iota}^{e}\,\frac{1-\theta_{D}}{1+\left(1-\theta_{D}\right)\left(\gamma_{\iota}^{e}-\gamma\right)}}_{\text{\text{issuance}}}
+\\\text{slashing shocks} & =\underbrace{\gamma\,\frac{1-\theta_{D}}{1+\left(1-\theta_{D}\right)\left(\gamma_{\iota}^{e}-\gamma\right)}}_{\text{\text{slashing/deflation}}}-\underbrace{\gamma_{\iota}^{e}\,\frac{1-\theta_{D}}{1+\left(1-\theta_{D}\right)\left(\gamma_{\iota}^{e}-\gamma\right)}}_{\text{\text{issuance}}}
 \end{cases}
 $$
 
 </v-click>
 </v-click>
-
-<!--
-
-# Limiting case
-
-When $\sigma_\iota^e = \gamma_\iota^e = 0$
-$$
-\begin{cases}
-\mu_{P} & =\underbrace{\theta_{D}\left(\mu^{\$}-c_{D}\right)}_{\text{productivity}}-\underbrace{\left(1-\theta_{D}\right)\mu_{\iota}^{e}}_{\text{inflation}}\\
-\\\sigma_{P} & =\underbrace{\theta_{D}\,\sigma^{\$}}_{\text{DeFi risk}}\\
-\\\gamma_{P} & =\underbrace{\frac{\left(1-\theta_{D}\right)\gamma}{1-\left(1-\theta_{D}\right)\gamma}}_{\text{\text{\text{deflation}}}}
-\end{cases}
-$$
-
-<v-click>
-
-- <u>**Policy objectives can be achieved**</u>:
-  - Target share of staking
- $\qquad\quad1-\theta(I_t^\$) = \Theta$ 
-  - Target rate of productivity
- $\qquad\theta(I_t^\$)\,\mu^\$  = M^{\$}$ 
-  - Minimize ETH volatility [TO DELETE]
-  $$
-  \sigma_{\iota}^{e} = \frac{\theta_D}{1-\theta_D}\sigma^\$, \qquad \qquad \gamma_\iota^e = \gamma
-  $$
-
-</v-click>
-
--->
-
-
-
-<!--* [TO DELETE] Mapping from  **issuance tax** to **issuance policy**:
-$$
-\mu_{\iota}^{e}=  \mu_{\iota}^{\$}-\mu_{P}-\left(\sigma_{\iota}^{\$}-\sigma_{P}\right)\sigma_{P}\qquad\qquad \sigma_{\iota}^{e}=  \sigma_{\iota}^{\$}-\sigma_{P}\qquad\qquad \gamma_{\iota}^{e}=  \frac{\gamma_{\iota}^{\$}-\gamma_{P}}{1+\gamma_{P}}
-$$-->
-
-
 
 ---
 section: Liquidity staking / security
 layout: two-cols-header
 ---
 
-# Liquid staking for DeFi
+# DeFi with liquid staking tokens
 
 ::left::
 
-Users access DeFi  via LSTs $\implies$ users allocate wealth across:
+### Users allocate wealth across:
   * Consumption (USD)
   * DeFi with LSTs
   * Staking with LSTs
@@ -500,16 +274,17 @@ Users access DeFi  via LSTs $\implies$ users allocate wealth across:
 
 <v-click>
 
-### USD returns when LSTs are used in DeFi
-- Dollar returns to LS DeFi: $\qquad\underbrace{\mu^{\$}\,dt+\sigma^{\$}\,dZ_{t}}_{\text{productivity rate}}$
-- Dollar returns to staking: <u>**zero**</u>
+### Dollar returns when LSTs are used in DeFi
+- Dollar returns to LS DeFi: $\qquad\quad\underbrace{\mu^{\$}\,dt+\sigma^{\$}\,dZ_{t}}_{\text{productivity rate}}$
+- Dollar returns to staking: $\qquad\qquad\quad$ <u>**zero**</u>
 
 <br>
 <br>
+<br>
 
-### USD returns when ETH is used in DeFi
+### Dollar returns when ETH is used in DeFi
 
-- DeFi: $\qquad \underbrace{\mu^{\$}\,dt+\sigma^{\$}\,dZ_{t}}_{\text{productivity rate}}-\underbrace{\frac{S_{t}}{D_t+S_t}\frac{dI_{t}^{\$}}{I_{t}^{\$}}}_{\text{issuance tax}}+\underbrace{\gamma\frac{S_{t}}{P_{t}\,Q_{t}}dN_{t}}_{\text{deflation}}$
+- DeFi: $\qquad \underbrace{\mu^{\$}\,dt+\sigma^{\$}\,dZ_{t}}_{\text{productivity rate}}-\underbrace{\frac{S_{t}}{D_t+S_t}\frac{dI_{t}^{\$}}{I_{t}^{\$}}}_{\text{issuance tax}}+\underbrace{\gamma\frac{S_{t}}{D_t+S_t}dN_{t}}_{\text{deflation}}$
 
 $$\footnotesize 
 \qquad\qquad\qquad\swarrow\qquad\qquad\qquad \nearrow 
@@ -525,116 +300,17 @@ $$
 ---
 
 # Consequences
-- Issuing ETH as reward to staking no longer affects the incentives to stakeing/DeFi.
+- Issuing ETH as reward to staking no longer affects the incentives to staking/DeFi.
 
 - **Centralisation**: stake at the hand of liquid staking protocols.
-
-
-<!-- 
-<br><br>
-
-
-* $S_t$: aggregate USD value of staked ETH
-* $\text{LST}_t$: aggregate USD value of productive ETH
-
-</v-click>
-
-
-# USD returns
-
-[DELETE FIRST PART] 
-- DeFi users (via LSTs): $\qquad \qquad \qquad\qquad \underbrace{\mu^{\$}\,dt+\sigma^{\$}\,dZ_{t}}_{\text{productivity rate}}+\underbrace{\frac{dI_{t}^{\$}}{I_{t}^{\$}}}_{\text{issuance}}-\underbrace{\gamma\,dN_{t}}_{\text{slashing}}+\text{adjustment}$
-
-- Stakers (via LSTs) $\qquad \qquad \qquad \qquad\qquad \qquad \underbrace{\frac{dI_{t}^{\$}}{I_{t}^{\$}}}_{\text{issuance}}-\underbrace{\gamma\,dN_{t}}_{\text{slashing}}+\text{adjustment}$
-
-<v-click>
-
-<br><br><br>-->
-
-
-
-<!-- <v-click>
-
-- Share of wealth invested in the blockchain
-$$
-\theta_{LST} = \max\{\min\{\frac{\mu^{\$}-c\left(\text{LST}_t\right)}{(\sigma^\$)^2},1\},0\}
-$$
-
-</v-click> -->
-
-
-
-
-
-
-<!--
-
-The classical tradeoff evaporates
-
-- Issuance can be effective to control ETH prices (volatility)
-
- Equilibrium aggregate wealth
-$$
-\frac{dx_{t}}{x_{t}}=\theta_{LST}\left(\mu^{\$}-c_{LST}\right)\,dt+\theta_{LST}\sigma^{\$}\,dZ_{t}
-$$ 
-
-ETH prices absorb issuance and staking effects
-$$
-\begin{cases}
-\mu_{P} & =\theta_{LST}\left(\mu^{\$}-c_{LST}\right)-\left(1-\theta_{LST}\right)\mu_{\iota}^{e}-\left(1-\theta_{LST}\right)\sigma_{\iota}^{e}\sigma_{P}\\~\\
-\sigma_{P} & =\theta_{LST}\,\sigma^{\$}-\left(1-\theta_{LST}\right)\sigma_{\iota}^{e}\\~\\
-\gamma_{P} & =\gamma\frac{1-\theta_{LST}}{1-\gamma\,\left(1-\theta_{LST}\right)}
-\end{cases}
-$$
-
-
--->
-
 
 ---
 section: LSTs / ETH
 ---
 
+# Ethereum today
 
-
-<!-- # DeFi with LSTs and ETH
-* Agents can access DeFi (be productive) via LSTs and ETH
-* Agents allocate wealth across:
-  * Consumption (USD)
-  * DeFi (via LSTs)
-  * DeFi (via ETH)
-
-
-
-# Investment options
-
-- DeFi with LSTs
-$$
-\frac{d\nu_{LST,t}}{\nu_{LST,t}}=\underbrace{\mu^{\$}\,dt}_{\text{adoption \& productivity}}+\underbrace{\sigma^{\$}\,dZ_{t}}_{\text{global risk}}-\underbrace{c_{LST}dt}_{\text{liq cost ETH}}+\underbrace{\frac{dI_{t}^{\$}}{I_{t}^{\$}}}_{\text{issuance}}-\underbrace{\gamma\frac{D_{t}}{P_{t}\,Q_{t}}dN_{t}}_{\text{slashing + deflation}}
-$$
-
-- DeFi with native tokens
-$$
-\frac{d\nu_{D,t}}{\nu_{D,t}}=\underbrace{\mu^{\$}\,dt}_{\text{adoption \& productivity}}+\underbrace{\sigma^{\$}\,dZ_{t}}_{\text{global risk}}-\underbrace{c_{D}dt}_{\text{liq cost ETH}}-\underbrace{\frac{S_{t}}{D_{t}}\frac{dI_{t}^{\$}}{I_{t}^{\$}}}_{\text{issuance tax}}+\underbrace{\gamma\frac{S_{t}}{P_{t}\,Q_{t}}dN_{t}}_{\text{deflation}}
-$$
-
-- Equilibrium aggregate wealth 
-$$
-\frac{dx_{t}}{x_{t}}=\left(\theta_{LST}\left(\mu^{\$}-c_{LST}\right)+\left(1-\theta_{LST}\right)\left(\mu^{\$}-c_{D}\right)\right)\,dt+\sigma^{\$}\,dZ_{t}
-$$
-
-
-<br /><br /><br /><br /><br /><br />
-<p style="text-align: center;"><h1>
-The general problem <a name="defi"></a></h1>
-</p>
-
--->
-
-
-# Today
-
-* Users can be productive with LSTs and ETH
+* Users can be productive with both LSTs and ETH
 <br>
 <br>
 
@@ -649,7 +325,8 @@ The general problem <a name="defi"></a></h1>
 <v-click>
 <br>
 
-* <u>**Endogenous liquidity costs**</u>: cheaper to use ETH if more people use ETH
+* <u>**Productivity rates**</u> of both tokens are positively correlated
+
 
 <v-click>
 
@@ -665,172 +342,121 @@ The general problem <a name="defi"></a></h1>
 
 ---
 
-# USD returns
+# Dollar returns
 
-- DeFi with LSTs $\qquad\qquad\qquad\qquad\qquad\quad \underbrace{\mu^{\$}\,dt+\sigma^{\$}\,dZ_{t}}_{\text{productivity rate}}-\underbrace{c\left(\text{LST}_t\right) dt}_{\text{liq cost stETH}}+\text{issuance}$
-<!-- - \underbrace{\gamma\frac{D_{t}}{P_{t}\,Q_{t}}dN_{t}}_{\text{slashing + deflation}}
- -->
+- DeFi with LSTs $\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad \underbrace{\mu^{\$}\,dt+{\color{red}\sigma^{\$}\,dZ_{t}}}_{\text{LST productivity rate}}+\text{issuance}$
+
 $$
 \qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad\uparrow
 $$
-- DeFi with native tokens $\qquad\qquad\qquad\qquad \underbrace{\mu^{\$}\,dt+\sigma^{\$}\,dW_{t}}_{\text{productivity rate}}-\underbrace{c\left(D_t\right)dt}_{\text{liq cost ETH}}-\text{issuance tax}$
+- DeFi with native tokens $\qquad\qquad\qquad\qquad\qquad\qquad \underbrace{\mu^{\$}\,dt+{\color{blue}\sigma^{\$}\,dW_{t}}}_{\text{ETH productivity rate}}-\text{issuance tax}$
 $$
 \qquad\qquad\qquad\qquad\qquad\swarrow
 $$
-- Staking with LSTs $\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad \text{issuance}$
-
-<!-- +\underbrace{\gamma\frac{S_{t}}{P_{t}\,Q_{t}}dN_{t}}_{\text{deflation}}
- -->
-
-<v-click>
-
-- Endogenous liquidity costs 
-$$c\left(x\right) = a - b\,x$$
-
-<v-click>
+- Staking with LSTs $\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad \text{issuance}$
 
 - Correlation: accessibility to DeFi with LSTs
 $$
-\langle W,Z\rangle = \rho > 0
+\langle {\color{blue}W},{\color{red}Z}\rangle = \rho > 0
 $$
 
-</v-click>
+
+
+---
+layout: two-cols-header
+---
+
+# Issuance/correlation favour LSTs
+
+::left::
+
+###  $\qquad$ Issuance
+![issuance](./code/issuance_nocost.png){style="transform: translate(0%, 0%); width: 450px"}
+
+::right::
+
+<v-click>
+
+###  $\qquad$ Correlation
+![correl](./code/correl_nocost.png){style="transform: translate(0%, 0%); width: 450px"}
+
 </v-click>
 
 ---
 
-# Issuance favours productivity with LSTs
+# Strategic complementarity
 
-![issuance](./code/issuance.png){style="transform: translate(40%, 0%); width: 450px"}
+- DeFi with LSTs $\qquad\qquad\qquad\qquad\qquad\quad \underbrace{\mu^{\$}\,dt+{\color{red}\sigma^{\$}\,dZ_{t}}}_{\text{LST productivity rate}}-\underbrace{c\left(\text{LST}_t\right) dt}_{\text{endog liq cost stETH}}+\text{issuance}$
+
+$$
+\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad\uparrow
+$$
+- DeFi with native tokens $\qquad\qquad\qquad\qquad \underbrace{\mu^{\$}\,dt+{\color{blue}\sigma^{\$}\,dW_{t}}}_{\text{LST productivity rate}}-\underbrace{c\left(D_t\right)dt}_{\text{endog liq cost ETH}}-\text{issuance tax}$
+$$
+\qquad\qquad\qquad\qquad\qquad\qquad\qquad\swarrow
+$$
+- Staking with LSTs $\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad \text{issuance}$
 
 ---
+layout: two-cols-header
+---
 
-# Correlation favours productivity with LSTs
+# Liquidity costs  $c\left(x\right) = a - b\,x$
 
-![correl](./code/correl.png){style="transform: translate(40%, 0%); width: 450px"}
+::left::
 
+###  $\qquad$ Without strategic complementarity
+![issuance](./code/issuance_nocost.png){style="transform: translate(0%, 0%); width: 450px"}
 
+::right::
 
-<!--
+###  $\qquad$ With strategic complementarity
+![correl](./code/issuance_cost.png){style="transform: translate(0%, 0%); width: 450px"}
 
-# The portfolio problem
+---
+layout: two-cols-header
+---
 
-- Assumption: **risk-reward tradeoffs are strictly ordered**
-- Three investments, two risk factors (productivity and staking)
-- Any exposure can be achieved with two assets (Carathéodory)
-- Because the assets’ risk–reward tradeoffs are strictly ordered, the minimal-sum representation is achieved by the two best assets and is unique
-- **Users select the equilibrium  that maximises log-growth of wealth (Kelly criterion)**
+# Liquidity costs  $c\left(x\right) = a - b\,x$
 
+::left::
 
+###  $\qquad$ Without strategic complementarity
+![issuance](./code/correl_nocost.png){style="transform: translate(0%, 0%); width: 450px"}
 
-# Three options (equilibrium wealth)
+::right::
 
-- Staking / DeFi with ETH
-$$
-\frac{dx_{t}}{x_{t}}=\theta_{D}\left(\mu^{\$}-c_{D}\right)\,dt+\theta_{D}\,\sigma^{\$}\,dZ_{t}
-$$
-
-- Staking / DeFi with LSTs
-$$
-\frac{dx_{t}}{x_{t}}=\theta_{LST}\left(\mu^{\$}-c_{LST}\right)\,dt+\theta_{LST}\,\sigma^{\$}\,dZ_{t}
-$$
-
-- DeFi with ETH / DeFi with LSTs
-$$
-\frac{dx_{t}}{x_{t}}=\left(\theta_{LST}\left(\mu^{\$}-c_{LST}\right)+\left(1-\theta_{LST}\right)\left(\mu^{\$}-c_{D}\right)\right)\,dt+\sigma^{\$}\,dZ_{t}
-$$
-
-- If $c_{LST}<c_D$, they choose **Staking / DeFi with LSTs** wins $\implies$ passively holding the LST is worthless
-
-
-<br /><br /><br /><br /><br /><br />
-<p style="text-align: center;"><h1>
-Conclusion <a name="defi"></a></h1>
-</p>
-
-
-add slide to say that when you add strategic complementartity it makes it faster to adopt LSTs
-
--->
+###  $\qquad$ With strategic complementarity
+![correl](./code/correl_cost.png){style="transform: translate(0%, 0%); width: 450px"}
 
 
 
 ---
 section: Conclusion
+---
+
+# Conclusion
+
+
+
+- Natural forces will lead to $100\%$ liquid staking $\implies$ issuance is not effective
+
+<v-clicks>
+
+- Is it good or bad ? 
+  - <u>**bad**</u>: slashing has no effect, no social planning, centralisation
+  - <u>**good**</u>: economic security, productivity
+
+- Demand for native ETH can be controlled with gas fees <br> $\implies$ decreases productivity / adoption
+
+- <u>**Future work**</u>: decentralised staking / distributed validator technology (DVT) <br> $\implies$ competition between blockchain and liquid staking protocols
+</v-clicks>
+
+
+---
 layout: end
 ---
 
-<!--
-# Decentralized pools are cool
-
-**PP** (protocol pool)
-- liquidity cost $c_P$
-- per‑staker fixed validator overhead $f$
-
-**LP** (liquid staking): 
-- liquidity cost $c_L$
-- extra mean‑zero risk with variance $\sigma$
-- LIDO proportional fee ($\alpha\in[0,1)$)
-
-
-
-# Decentralized pools are cool 
-
-**PP** (protocol pool)
-- liquidity cost $c_P$
-- per‑staker fixed validator overhead $f$
-
-**LP** (liquid staking): 
-- liquidity cost $c_L$
-- extra mean‑zero risk with variance $\sigma$
-- LIDO proportional fee ($\alpha\in[0,1)$)
-
-
-
-# Conclusion: takeaways
-
-slide: crystal clear that key takeaway natural forces will lead to everyone staking and therefore issuance is not effective (make it big with an equation that expresses issuance tax as a function of how many people are stakiing) you can restore issuance by raising gas fees (but has negative effect), 
-
-* Full staking (all ETH staked) increases economic security but may concentrate control if LST providers are centralised.
-* Policy should target decentralised LST designs and incentives to avoid a single point of failure.
-
-1. In a closed accounting model, issuance redistributes USD wealth; productivity drives net USD creation.
-2. ETH price loadings are endogenous — their interpretation depends on whether you allow exogenous price shocks.
-3. Liquid staking expands DeFi access and is often preferred when it lowers effective liquidity/transaction costs.
-4. Policy matters: issuance schedule and decentralisation of LSTs both influence equilibrium concentration and security
-
-#### Modeling caveats (accounting choice)
-
-- demand for ETH to pay gas fees
-
-### What we don't have 
-
-- productivity of the blockchain does not grow with how much is staked 
-- today this is not the case, because LST tokens don't give you access to all what ETH gives you access to: but once it happens, the model will be true
-  
-  $\implies$ diversification effects between ETH / stETH
-
-### Consequences
-- In POW we had concentration because of sophistication / capital
-- Now we have concentration because of liquid staking
-- is it bad ? 
-  - staking is a way to avoid the security tax
-  - not necessarily if liquid staking leads to security (more nodes, solo stakers)
-- This can be achieved with protocol / decentralised liquid staking
-
-### TO SAY:
-
-- assuption: defi sharpe is positive otherwise no productivity: staking is worth zero
-- slashing share can be used as policy tool
-- DVT: distributed validator technology
-- Solo staking: an impossibility, any pool is strictly preferable
-https://vitalik.eth.limo/general/2023/09/30/enshrinement.html
-https://notes.ethereum.org/bW2PeHdwRWmeYjCgCJJdVA
-
--->
-
 Thank you !
 
-[faycaldrissi.com](https://www.faycaldrissi.com/)
-
-[faycaldrissi.com/staking_talk/](https://www.faycaldrissi.com/staking_talk/)
+These slides:  [faycaldrissi.com/staking_talk/](https://www.faycaldrissi.com/staking_talk/)
