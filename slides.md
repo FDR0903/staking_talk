@@ -17,7 +17,7 @@ theme: frankfurt
 infoLine: true # on by default, can be turned off
 #author: 'Your name here' # shows in infoLine
 #title: 'Title' # shows in infoLine
-date: '19/09/2025' # shows in infoLine, defaults to the current date
+date: '16/10/2025' # shows in infoLine, defaults to the current date
 
 mdc: true
 ---
@@ -64,11 +64,8 @@ Users utilise LSTs in DeFi applications: AMM pools (stETH), Aave Interest Bearin
 <br>
 <br>
 
-![LIDO stETH issuance](./images/LIDOsteth.png){style="transform: translate(15%, -10%); width: 350px"}
-![Rocket Pool LST](./images/RocketPoolLST.png){style="transform: translate(125%, -110%); width: 350px"}
-![Binance LST](./images/BinanceLST.png){style="transform: translate(75%, -105%); width: 350px"}
-
-
+![LIDO stETH issuance](./images/LIDOsteth.png){style="transform: translate(-8%, 0%); width: 480px"}
+![Rocket Pool LST](./images/RocketPoolLST.png){style="transform: translate(94%, -100%); width: 480px"}
 ---
 
 # Fact #2: liquid staking dominates solo staking
@@ -214,9 +211,6 @@ $$
 
 <br>
 
-
-
-
 </v-click>
 
 
@@ -225,7 +219,7 @@ $$
 
 # Social planning through issuance 
 
-* <u>**Policy tools**</u> (slashing rate $\gamma$, ETH issuance) affect USD wealth of users
+* <u>**Policy tools**</u> (slashing, ETH issuance) affect USD wealth of users $\implies$ influence incentives
 
 <v-click>
  
@@ -267,9 +261,14 @@ layout: two-cols-header
 
 ::left::
 
+<br>
+<br>
+<br>
+<br>
+
 ### Users allocate wealth across:
   * Consumption (USD)
-  * DeFi with LSTs
+  * DeFi <u>**with LSTs**</u>
   * Staking with LSTs
 
 <br>
