@@ -111,7 +111,7 @@ LSTs eliminate the tension between staking and DeFi
 Natural forces will migrate DeFi from native ETH to LSTs
 <br>
 
-Issuing (or slashing) Eth would no longer affect user incentives
+Issuing (or slashing) ETH would no longer affect user incentives
 
 </h3>
 </p>
@@ -192,10 +192,9 @@ $$
 
 # Dollar returns
 
-### Governing dynamics
+### USD and ETH dynamics
 - Only DeFi creates/destroys USD wealth
-- Staked ETH changes due to issuance/slashing, productive ETH does not
-- Issuance regulates the supply
+- Staked ETH changes due to issuance/slashing, DeFi ETH does not
 
 <v-click>
 
@@ -226,20 +225,27 @@ $$
 
 # Social planning through issuance 
 
-* <u>**Policy tools**</u>: slashing rate $\gamma$, ETH issuance
-$$
-{dI_{t}^{\$}}/{I_{t}^{\$}}=\mu_{\iota}^{\$}\,dt+\sigma_{\iota}^{\$}\,dZ_{t}+\gamma_{\iota}^{\$}\,dN_{t}
-$$
+* <u>**Policy tools**</u> (slashing rate $\gamma$, ETH issuance) affect USD wealth of users
 
 <v-click>
-
-- <u>**Policy objective**</u>: incentives / allocations
+ 
+- <u>**Policy objectives**</u> can be attained (Jermann 2023, Cong,
+He and Tang 2022, Kose, Rivera and Saleh 2021, and others)
 $$
-\theta_D = \theta_D(\gamma, \mu_{\iota}^{\$}, \sigma_{\iota}^{\$}, \gamma_{\iota}^{\$})
+\text{issuance tax policy} =\mu_{\iota}^{\$}\,dt+\sigma_{\iota}^{\$}\,dZ_{t}+\gamma_{\iota}^{\$}\,dN_{t}
+$$
+<br>
+<br>
+
+$$\footnotesize
+\text{allocation } = \theta_D(\gamma, \mu_{\iota}^{\$}, \sigma_{\iota}^{\$}, \gamma_{\iota}^{\$}) \qquad \qquad \qquad \text{ETH prices: } \begin{cases}
+\text{drift}  & = \mu_P(\gamma, \mu_{\iota}^{\$}, \sigma_{\iota}^{\$}, \gamma_{\iota}^{\$})\\
+\\\text{productivity shocks}  & = \sigma_P(\gamma, \mu_{\iota}^{\$}, \sigma_{\iota}^{\$}, \gamma_{\iota}^{\$}) \\
+\\\text{slashing shocks} & =\gamma_P(\gamma, \mu_{\iota}^{\$}, \sigma_{\iota}^{\$}, \gamma_{\iota}^{\$})
+\end{cases}
 $$
 
-<v-click>
-
+<!--<v-click>
 - <u>**Policy objective**</u>: ETH prices
 $$\footnotesize
 \begin{cases}
@@ -249,7 +255,7 @@ $$\footnotesize
 \end{cases}
 $$
 
-</v-click>
+</v-click> -->
 </v-click>
 
 ---
@@ -274,23 +280,27 @@ layout: two-cols-header
 
 <v-click>
 
-### Dollar returns when LSTs are used in DeFi
-- Dollar returns to LS DeFi: $\qquad\quad\underbrace{\mu^{\$}\,dt+\sigma^{\$}\,dZ_{t}}_{\text{productivity rate}}$
-- Dollar returns to staking: $\qquad\qquad\quad$ <u>**zero**</u>
+### Dollar returns <u>when LSTs are used</u> in DeFi
+- Staking: $\qquad\qquad\quad\qquad\qquad\quad$ <u>**zero**</u>
+<br>
+<br>
+
+- DeFi: $\qquad\qquad\quad\qquad\qquad\underbrace{\mu^{\$}\,dt+\sigma^{\$}\,dZ_{t}}_{\text{productivity rate}}$
 
 <br>
 <br>
 <br>
 
-### Dollar returns when ETH is used in DeFi
 
-- DeFi: $\qquad \underbrace{\mu^{\$}\,dt+\sigma^{\$}\,dZ_{t}}_{\text{productivity rate}}-\underbrace{\frac{S_{t}}{D_t+S_t}\frac{dI_{t}^{\$}}{I_{t}^{\$}}}_{\text{issuance tax}}+\underbrace{\gamma\frac{S_{t}}{D_t+S_t}dN_{t}}_{\text{deflation}}$
+### Dollar returns <u>when ETH is used</u> in DeFi
+
+- DeFi: $\qquad \text{productivity rate}-\text{issuance tax}+\text{deflation}$
 
 $$\footnotesize 
 \qquad\qquad\qquad\swarrow\qquad\qquad\qquad \nearrow 
 $$
 
-- Staking: $\qquad\qquad\qquad  \underbrace{\frac{dI_{t}^{\$}}{I_{t}^{\$}}}_{\text{issuance}}-\underbrace{\gamma\frac{D_{t}}{D_t+S_t}dN_{t}}_{\text{- slashing + deflation}}$
+- Staking: $\qquad\qquad\quad  \text{issuance}- \text{slashing}$
 
 <br>
 
@@ -300,7 +310,13 @@ $$
 ---
 
 # Consequences
-- Issuing ETH as reward to staking no longer affects the incentives to staking/DeFi.
+- **Issuing ETH** as reward to staking no longer affects the incentives to staking/DeFi.
+
+<br>
+
+- **Slashing ETH** no longer affects USD wealth.
+
+<br>
 
 - **Centralisation**: stake at the hand of liquid staking protocols.
 
