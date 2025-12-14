@@ -43,25 +43,14 @@ section: Motivation
 
 # Introduction
 
-### Proof of stake
+### How liquid staking works
 
-- Lock assets on the blockchain to aparticipate in the consensus protocol
-- blockchain pays for security with **issuance** (staking rewards)
-- blockchain incentivises good behaviour with **slashing**
-
-<br>
-<br>
-
-<v-click>
-
-### Liquid staking
-
-- <u>**Deposit assets**</u>: users lock tokens (ETH, SOL) in a liquid staking protocol
+- <u>**Deposit assets**</u>: users lock tokens in a liquid staking protocol (ETH, SOL)
 - <u>**Receive the derivative token**</u>: protocol issues a token (stETH) that represents the staked assets
 - <u>**Earn rewards**</u>: staking reward increases the value of the derivative token
 - <u>**Examples**</u>: Lido, Rocket pool, Ankr, Marinade Finance (Solana)
 
-</v-click>
+<br>
 
 <!--<v-click>
 
@@ -74,19 +63,12 @@ section: Motivation
 ---
 
 # Fact #1: LSTs enable DeFi access
-Users can uses LSTs in DeFi
-- Uniswap pools (stETH)
-- Aave Interest Bearing STETH  (stETH as collateral to borrow  assets)
+Users utilise LSTs in DeFi applications: AMM pools (stETH), Aave Interest Bearing STETH  (stETH as collateral to borrow  assets)
 <br>
-
-<v-click>
-Market cap of LSTs in increasing: <br>
+<br>
 
 ![LIDO stETH issuance](./images/LIDOsteth.png){style="transform: translate(-8%, 0%); width: 480px"}
 ![Rocket Pool LST](./images/RocketPoolLST.png){style="transform: translate(94%, -100%); width: 480px"}
-
-</v-click>
-
 ---
 
 # Fact #2: liquid staking represents the majoritary of staking
