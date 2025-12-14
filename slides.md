@@ -17,7 +17,7 @@ theme: frankfurt
 infoLine: true # on by default, can be turned off
 #author: 'Your name here' # shows in infoLine
 #title: 'Title' # shows in infoLine
-date: '20/11/2025' # shows in infoLine, defaults to the current date
+date: '14/12/2025' # shows in infoLine, defaults to the current date
 
 mdc: true
 ---
@@ -73,14 +73,15 @@ section: Motivation
 
 ---
 
-# Fact #1: LSTs enable DeFi access
-Users can uses LSTs in DeFi
+# Fact #1: LSTs enable DeFi
+### Users can uses LSTs in DeFi
 - Uniswap pools (stETH)
 - Aave Interest Bearing STETH  (stETH as collateral to borrow  assets)
-<br>
+<br><br>
 
 <v-click>
-Market cap of LSTs in increasing: <br>
+
+### Market cap of LSTs in increasing
 
 ![LIDO stETH issuance](./images/LIDOsteth.png){style="transform: translate(-8%, 0%); width: 480px"}
 ![Rocket Pool LST](./images/RocketPoolLST.png){style="transform: translate(94%, -100%); width: 480px"}
@@ -89,7 +90,7 @@ Market cap of LSTs in increasing: <br>
 
 ---
 
-# Fact #2: liquid staking represents the majoritary of staking
+# Fact #2: liquid staking dominates solo staking
 
 - Liquid staking is easy
 <v-click>
@@ -105,7 +106,6 @@ $\implies$ strategic complementarity
 
 </v-click>
 </v-click>
-
 
 ---
 
@@ -126,9 +126,7 @@ What are the effects of liquid staking on the macroeconomics of blockchains ?
 
 <p style="text-align: center;"><h3> <u>Some answers</u> <br>
 
-The tension between staking and DeFi productivity is necessary for 
-
-<br>
+The tension between staking and DeFi (productivity) is necessary for issuance & slashing to influence user incentives
 
 LSTs eliminate the tension between staking and DeFi
 <br>
