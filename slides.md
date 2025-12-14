@@ -45,9 +45,9 @@ section: Motivation
 
 ### Proof of stake
 
-- Lock assets on the blockchain to aparticipate in the consensus protocol
-- blockchain pays for security with **issuance** (staking rewards)
-- blockchain incentivises good behaviour with **slashing**
+- Lock assets on the blockchain to participate in the consensus protocol
+- <u>Economic security</u>: blockchain pays for security with **issuance** (staking rewards)
+- Blockchain incentivises good behaviour with **slashing**
 
 <br>
 <br>
@@ -218,13 +218,10 @@ $$
 
 # Blockchain economy without liquid staking tokens
 
-### Blockchain USD and ETH supply dynamics
-- Only DeFi creates/destroys USD wealth
-- Staked ETH changes due to issuance/slashing, DeFi ETH does not
+- $S_t\,$:  USD value of aggregate staked ETH
+- $D_t$:  USD value of aggregate productive ETH
 
-<v-click>
 <br>
-
 
 ### Dollar return to DeFi: $\small \qquad \qquad \qquad \qquad \qquad \underbrace{\mu^{\$}\,dt+\sigma^{\$}\,dZ_{t}}_{\text{productivity rate}}-\underbrace{\frac{S_{t}}{D_t}\frac{dI_{t}^{\$}}{I_{t}^{\$}}}_{\text{issuance tax}}+\underbrace{\gamma\frac{S_{t}}{D_t+S_t}dN_{t}}_{\text{deflation}}$
 
@@ -234,42 +231,56 @@ $$
 
 ### Dollar return to staking: $\small \qquad \qquad \qquad \qquad \qquad \qquad  \underbrace{\frac{dI_{t}^{\$}}{I_{t}^{\$}}}_{\text{issuance}}-\underbrace{\gamma\frac{D_{t}}{D_t+S_t}dN_{t}}_{\text{slashing}}$
 
+<v-click>
+
+- Users determine their allocation $\theta_D$
+$$
+dx_t = \theta_{D,t} \times \text{DeFi} + (1-\theta_{D,t}) \times \text{staking } - \text{consumption} 
+$$ 
+
+</v-click>
 </v-click>
 
 <br>
 
-</v-click>
-
-- $S_t\,$:  USD value of aggregate staked ETH
-- $D_t$:  USD value of aggregate productive ETH
 
 
 
 ---
 
-# Blockchain social planning
+# Blockchain macroeconomics
 
-* <u>**Policy tools**</u> (slashing, ETH issuance) affect USD wealth of users $\implies$ influence incentives
-
+### Equilibrium and clearing conditions
+- Prices clear when ETH demand from users matches ETH supply
+$
+\qquad \qquad \qquad P_t \, Q_t = S_t + D_t = x_t
+$
 <v-click>
- 
-$\implies$ <u>**Policy objectives**</u> can be attained (Kose, Rivera and Saleh (2021), Jermann (2023), Cong, He and Tang (2022), and others)
 
+- Only DeFi (productivity) and consumption create/destroy USD in the economy
+$
+\quad d(P_t\,Q_t) = D_t (\mu^{\$}\,dt+\sigma^{\$}\,dZ_{t} ) - \beta\, P_t\,Q_t\,dt
+$
 <v-click>
 
-- In our model
-$$
-\text{issuance tax policy} =\mu_{\iota}^{\$}\,dt+\sigma_{\iota}^{\$}\,dZ_{t}+\gamma_{\iota}^{\$}\,dN_{t}
-$$
-<br>
+- ETH supply changes due to issuance/slashing
+$
+\qquad\qquad\qquad \qquad \qquad\qquad\ \ \ \text{tax policy} ={\color{red} \mu_{\iota}^{\$}}\,dt+{\color{red} \sigma_{\iota}^{\$}}\,dZ_{t}+{\color{red}\gamma_{\iota}^{\$}}\,dN_{t}
+$
+<v-click>
+
+- Staked / productive ETH determined by user decisions $\qquad\qquad\qquad\qquad\quad\ \ D_t = \theta_D\,P_t\,Q_t \qquad S_t = (1-\theta_D)\,P_t\,Q_t$
+<v-click>
+
 <br>
 
+### Solution
 
 $$\footnotesize
-\text{allocation } = \theta_D(\gamma, \mu_{\iota}^{\$}, \sigma_{\iota}^{\$}, \gamma_{\iota}^{\$}) \qquad \qquad \qquad \text{ETH prices: } \begin{cases}
-\text{drift}  & = \mu_P(\gamma, \mu_{\iota}^{\$}, \sigma_{\iota}^{\$}, \gamma_{\iota}^{\$})\\
-\\\text{productivity shocks}  & = \sigma_P(\gamma, \mu_{\iota}^{\$}, \sigma_{\iota}^{\$}, \gamma_{\iota}^{\$}) \\
-\\\text{slashing shocks} & =\gamma_P(\gamma, \mu_{\iota}^{\$}, \sigma_{\iota}^{\$}, \gamma_{\iota}^{\$})
+\text{allocation } = \theta_D(\gamma,{\color{red} \mu_{\iota}^{\$}}, {\color{red} \sigma_{\iota}^{\$}}, {\color{red}\gamma_{\iota}^{\$}}) \qquad \qquad \qquad \text{ETH prices: } \begin{cases}
+\text{drift}  & = \mu_P(\gamma,{\color{red} \mu_{\iota}^{\$}},{\color{red} \sigma_{\iota}^{\$}}, {\color{red}\gamma_{\iota}^{\$}})\\
+\\\text{productivity shocks}  & = \sigma_P(\gamma, {\color{red} \mu_{\iota}^{\$}},{\color{red} \sigma_{\iota}^{\$}}, {\color{red}\gamma_{\iota}^{\$}}) \\
+\\\text{slashing shocks} & =\gamma_P(\gamma, {\color{red} \mu_{\iota}^{\$}}, {\color{red} \sigma_{\iota}^{\$}}, {\color{red}\gamma_{\iota}^{\$}})
 \end{cases}
 $$
 
@@ -284,6 +295,17 @@ $$\footnotesize
 $$
 
 </v-click> -->
+
+<v-click>
+
+### Policy
+
+* <u>**Policy tools**</u> (slashing, ETH issuance) affect USD wealth of users $\implies$ influence incentives 
+* <u>**Policy objectives**</u> can be attained (Kose, Rivera and Saleh (2021), Jermann (2023), Cong, He and Tang (2022), and others)
+
+</v-click>
+</v-click>
+</v-click>
 </v-click>
 </v-click>
 
@@ -314,9 +336,7 @@ layout: two-cols-header
 
 <v-click>
 
-## Dollar returns:
-
-### - With <u>only ETH</u> in DeFi
+### Dollar returns -- <u>only ETH</u> in DeFi
 
 - DeFi: $\qquad \text{productivity rate}-\text{issuance tax}+\text{deflation}$
 
@@ -333,7 +353,7 @@ $$
 
 <v-click>
 
-### - With <u>only LSTs</u> in DeFi
+### Dollar returns -- <u>only LSTs</u> in DeFi
 - Staking: $\qquad\qquad\quad\qquad\qquad\quad$ <u>**zero**</u>
 <br>
 <br>
