@@ -189,7 +189,7 @@ What are the effects of liquid staking on the macroeconomics of blockchains ?
 </h3>
 </p>
 
-<v-click>
+<v-click> 
 
 <br>
 <br>
@@ -530,14 +530,14 @@ layout: two-cols-header
 ::left::
 
 ###  $\qquad$ Issuance
-![issuance](./code/issuance_nocost.png){style="transform: translate(0%, 0%); width: 450px"}
+![issuance](./images/issuance_nocost.png){style="transform: translate(0%, 0%); width: 450px"}
 
 ::right::
 
 <v-click>
 
 ###  $\qquad$ Correlation
-![correl](./code/correl_nocost.png){style="transform: translate(0%, 0%); width: 450px"}
+![correl](./images/correl_nocost.png){style="transform: translate(0%, 0%); width: 450px"}
 
 </v-click>
 
@@ -565,12 +565,12 @@ layout: two-cols-header
 ::left::
 
 ###  $\qquad$ Without strategic complementarity
-![issuance](./code/issuance_nocost.png){style="transform: translate(0%, 0%); width: 450px"}
+![issuance](./images/issuance_nocost.png){style="transform: translate(0%, 0%); width: 450px"}
 
 ::right::
 
 ###  $\qquad$ With strategic complementarity
-![correl](./code/issuance_cost.png){style="transform: translate(0%, 0%); width: 450px"}
+![correl](./images/issuance_cost.png){style="transform: translate(0%, 0%); width: 450px"}
 
 ---
 layout: two-cols-header
@@ -581,12 +581,12 @@ layout: two-cols-header
 ::left::
 
 ###  $\qquad$ Without strategic complementarity
-![issuance](./code/correl_nocost.png){style="transform: translate(0%, 0%); width: 450px"}
+![issuance](./images/correl_nocost.png){style="transform: translate(0%, 0%); width: 450px"}
 
 ::right::
 
 ###  $\qquad$ With strategic complementarity
-![correl](./code/correl_cost.png){style="transform: translate(0%, 0%); width: 450px"}
+![correl](./images/correl_cost.png){style="transform: translate(0%, 0%); width: 450px"}
 
 
 
