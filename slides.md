@@ -41,27 +41,97 @@ mdc: true
 section: Motivation
 ---
 
-# Introduction
 
-### Proof of stake
+# Blockchains
+
+### Modern economies rely on trusted intermediaries (banks, clearing houses, platforms, governments)
+<v-click>
+
+- Intermediaries reduce transaction costs and enforce contracts, but introduce frictions
+  - opacity, market power, monopoly, exclusion, censorship
+<br><br>
+<v-click>
+
+### Can we coordinate economic activity at scale with less centralized trust?
+- Blockchains are the **technological response** to centralisation **frictions**
+- Blockchains are the **technological** equivalent of **regulation**:
+  - algorithmic and publicly verifiable rules (consensus) to conduct transactions and enforce contracts
+<br><br>
+<v-click>
+
+### Blockchains replace institutional trust with 
+  1. a shared, tamper-resistant ledger
+  2. a consensus protocol
+  3. economic incentives: participants rewarded to follow rules
+
+
+</v-click>
+</v-click>
+</v-click>
+
+
+---
+ 
+# Proof of stake (POS) blockchains
+
 
 - Lock assets on the blockchain to participate in the consensus protocol
-- <u>Economic security</u>: blockchain pays for security with **issuance** (staking rewards)
+- Blockchain pays for security with **issuance** (staking rewards)
+
+
+![POS](./images/POS.jpg){style="transform: translate(0%, 0%); width: 900px"}
+
+---
+
+
+# Proof of stake (POS) blockchains
+
+### Slashing
 - Blockchain incentivises good behaviour with **slashing**
 
-<br>
-<br>
+<center>
+
+```mermaid
+flowchart LR
+  V["Validation<br/>work"]
+
+  R["Issuance<br/> Reward"]
+  S["Slashing<br/> bad validation"]
+
+  V --> R
+  V --> S
+```
+
+</center>
 
 <v-click>
 
-### Liquid staking
+### Economic security
 
-- <u>**Deposit assets**</u>: users lock tokens (ETH, SOL) in a liquid staking protocol
-- <u>**Receive the derivative token**</u>: protocol issues a token (stETH) that represents the staked assets
-- <u>**Earn rewards**</u>: staking reward increases the value of the derivative token
-- <u>**Examples**</u>: Lido, Rocket pool, Ankr, Marinade Finance (Solana)
+- High dollar value of total stake incentivised by issuance: expensive $51\%$ attack
+- Diversity of staking pool: decentralised staking prevents coordination attacks
 
 </v-click>
+
+---
+
+# Liquid staking
+
+### Solo staking
+- Validation work involves costs, hardware, knowledge IT/software, minimal stake $32$ETH
+<br><br>
+
+### Liquid staking
+1. **Staking is delegated**
+  - *Deposit assets*: users lock tokens (ETH, SOL) in a liquid staking protocol
+  - *Earn rewards*: staking reward increases the value of the derivative token
+
+2. **Liquid ?** 
+  - *Receive a derivative token*: protocol issues a token (stETH) that represents the staked assets
+  - The staked token can be traded and used on the blockchain
+<br><br>
+
+### Examples: Lido, Rocket pool, Ankr, Marinade Finance (Solana)
 
 <!--<v-click>
 
@@ -83,6 +153,7 @@ section: Motivation
 
 ### Market cap of LSTs in increasing
 
+- **January 2026**: total market capitalization of all staked ETH is approximately $\$ 109$ billion
 ![LIDO stETH issuance](./images/LIDOsteth.png){style="transform: translate(-8%, 0%); width: 480px"}
 ![Rocket Pool LST](./images/RocketPoolLST.png){style="transform: translate(94%, -100%); width: 480px"}
 
@@ -92,7 +163,7 @@ section: Motivation
 
 # Fact #2: liquid staking dominates solo staking
 
-- Liquid staking is easy
+- Liquid staking is easier
 <v-click>
 
 - Liquid staking reduces reward risk
