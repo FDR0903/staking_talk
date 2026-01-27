@@ -1025,3 +1025,7 @@ layout: end
 Thank you !
 
 These slides:  [faycaldrissi.com/staking_talk/](https://www.faycaldrissi.com/staking_talk/)
+
+Questions ?
+
+![pisa](./images/pisa.jpeg){style="transform: translate(35%, 0%); width: 240px"}
