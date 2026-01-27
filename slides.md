@@ -448,7 +448,7 @@ $$
 
 #### $\footnotesize \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad\swarrow\qquad\qquad\qquad \nearrow$
 
-#### Dollar return to staking: $\small  \qquad \qquad \qquad \qquad  \underbrace{\frac{dI_{t}}{I_{t}}}_{\text{issuance}}-\underbrace{\gamma\frac{D_{t}}{D_t+S_t}dN_{t}}_{\text{slashing}}$
+#### Dollar return to staking: $\small  \qquad \qquad \qquad \qquad \qquad \qquad  \underbrace{\frac{dI_{t}}{I_{t}}}_{\text{issuance}}-\underbrace{\gamma\frac{D_{t}}{D_t+S_t}dN_{t}}_{\text{slashing}}$
 
 
 </v-click>
