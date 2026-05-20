@@ -17,7 +17,7 @@ theme: frankfurt
 infoLine: true # on by default, can be turned off
 #author: 'Your name here' # shows in infoLine
 #title: 'Title' # shows in infoLine
-date: '19/05/2026' # shows in infoLine, defaults to the current date
+date: '20/05/2026' # shows in infoLine, defaults to the current date
 
 mdc: true
 ---
@@ -53,15 +53,13 @@ section: Motivation
 <v-click>
 
 ### Blockchains are a technological response: algorithmic trust
-- a **consensus protocol** + **economic incentives** that reward following the rules
-
-$\implies$ a shared, tamper-resistant ledger
+- **ledger** + **consensus protocol and economic incentives** that reward following the rules
 
 </v-click>
 <br>
 <v-click>
 
-### Scale today
+### Today
 - stablecoins: $\$320$bn market cap; decentralised trading: $\$8.2$bn/day; lending/borrowing: $\$3$bn/day; crypto market cap: $\$2.63$trn
 
 </v-click>
@@ -75,9 +73,9 @@ $\implies$ a shared, tamper-resistant ledger
 
 <v-click>
 
-## Trust in PoS
+## Three foundations of trust
 - **Economic security:** high dollar value of stake makes attacks expensive $\implies$ blockchain pays for security with **issuance**
-- **Good consensus:** blockchain disciplines behaviour through **slashing**
+- **Discipline:** bad behaviour is punished through **slashing**
 
 <center>
 
@@ -469,7 +467,7 @@ section: With ETH and LSTs
   * Consumption (USD)
   * DeFi (with LSTs)
   * DeFi (with ETH)
-  * Staking (with LSTs)
+  * Staking
 
 <v-click>
 <br>
