@@ -17,7 +17,7 @@ theme: frankfurt
 infoLine: true # on by default, can be turned off
 #author: 'Your name here' # shows in infoLine
 #title: 'Title' # shows in infoLine
-date: '20/05/2026' # shows in infoLine, defaults to the current date
+date: '26/06/2026' # shows in infoLine, defaults to the current date
 
 mdc: true
 ---
@@ -52,15 +52,20 @@ section: Motivation
 <br><br>
 <v-click>
 
-### Blockchains are a technological response: algorithmic trust
-- **ledger** + **consensus protocol and economic incentives** that reward following the rules
+### Blockchains are a technological response
+- **ledger**: shared, tamper-resistant 
+- **algorithmic trust**: a consensus protocol + economic incentives
+
+
 
 </v-click>
 <br>
 <v-click>
 
-### Today
-- stablecoins: $\$320$bn market cap; decentralised trading: $\$8.2$bn/day; lending/borrowing: $\$3$bn/day; crypto market cap: $\$2.63$trn
+### Decentralisation today
+- stablecoins market cap: $\$320$bn, crypto market cap: $\$2.63$trn
+- decentralised trading: $\$8.2$bn/day
+- lending/borrowing: $\$3$bn/day; 
 
 </v-click>
 </v-click>
@@ -69,13 +74,18 @@ section: Motivation
  
 # Proof of stake (PoS) blockchains
 
-![POS](./images/POS.jpg){style="transform: translate(40%, 0%); width: 500px"}
+![POS](./images/POS.jpg){style="transform: translate(5%, 10%); width: 800px"}
 
-<v-click>
+---
+
+# Proof of stake (PoS) blockchains
+
 
 ## Three foundations of trust
-- **Economic security:** high dollar value of stake makes attacks expensive $\implies$ blockchain pays for security with **issuance**
-- **Discipline:** bad behaviour is punished through **slashing**
+- **Economic security:** high dollar value of stake makes attacks expensive $\implies$ blockchain pays for security with <u>issuance</u> 
+<v-click>
+
+- **Discipline:** bad behaviour is punished through <u>slashing</u>
 
 <center>
 
@@ -94,68 +104,44 @@ flowchart LR
 
 - **Decentralisation:** diversity in the staking pool reduces the risk of coordination/concentration 
 
+<v-click>
+
+<br><br><br>
+
+### **This paper:** liquid staking can weaken all three: issuance, slashing, and decentralisation
+
+</v-click>
 </v-click>
 </v-click>
 
 ---
 
-# Liquid staking
+# What is liquid staking?
 
-### **This paper:** liquid staking can weaken all three: economic security, consensus discipline, and decentralisation
 
-#### First, what is liquid staking?
 
-<v-click>
-<br>
-
-### Validation has frictions
-- Hardware, IT/software expertise, a $32$ ETH minimum, **opportunity cost:** staked ETH cannot be used productively
+### Consensus (validation) has frictions
+- Hardware, IT/software expertise, a $32$ ETH minimum
+- **opportunity cost:** staked ETH cannot be used
 
 $\implies$ frictions shrink the staking base
 
 <v-click>
 
-### Liquid staking removes these frictions &nbsp;(Lido, Rocket Pool, Ankr)
+<br>
 
-<center>
+### Liquid staking addresses these frictions
 
-```mermaid {scale: 0.6}
-flowchart TD
-  L["Liquid staking"]
-
-  S["Liquid
-  ──────────────────
-  Receive a derivative token
-  The token is tradable in DeFi"]
-
-  Q["Staking
-  ──────────────────
-  Validation is delegated
-  Deposit native tokens (ETH)
-  Earn staking rewards"]
-
-  L --> S
-  L --> Q
-```
-
-</center>
+<div class="flex flex-col items-center mt-2" style="font-size:0.95rem;">
+<div class="px-5 py-1.5 rounded-md text-white font-semibold" style="background:#3838a0;">Liquid staking</div>
+<div class="grid grid-cols-2 w-full text-2xl leading-none mt-1 mb-1" style="max-width:980px; color:#3838a0;"><div class="text-center">↓</div><div class="text-center">↓</div></div>
+<div class="grid grid-cols-2 gap-10 w-full" style="max-width:980px;">
+<div class="rounded-lg px-5 py-3 text-left" style="background:#ECECFF; border:1.5px solid #3838a0;"><div class="text-center font-semibold pb-1 mb-2" style="color:#3838a0; border-bottom:1px solid #b5b4e6;">(delegated) Staking</div><ul class="list-disc pl-5 space-y-1"><li>Validation is delegated: users lock native tokens in a pool</li><li>Earn staking rewards</li><li>Examples: Lido, Rocket pool, Ankr, Marinade Finance (Solana)</li></ul></div>
+<div class="rounded-lg px-5 py-3 text-left" style="background:#ECECFF; border:1.5px solid #3838a0;"><div class="text-center font-semibold pb-1 mb-2" style="color:#3838a0; border-bottom:1px solid #b5b4e6;">Liquid</div><ul class="list-disc pl-5 space-y-1"><li>Receive a derivative token that represents the staked assets</li><li>The token is tradable in DeFi</li></ul></div>
+</div>
+</div>
 
 </v-click>
-</v-click>
-
-
-<!--### Liquid staking
-1. **Staking is delegated**
-  - *Deposit assets*: users lock tokens (ETH, SOL) in a liquid staking protocol
-  - *Earn rewards*: staking reward increases the value of the derivative token
-<br><br>
-
-2. **Liquid ?** 
-  - *Receive a derivative token*: protocol issues a token (stETH) that represents the staked assets
-  - The staked token can be traded and used on the blockchain
-<br><br>
-
-### Examples: Lido, Rocket pool, Ankr, Marinade Finance (Solana)
 
 <!--<v-click>
 
@@ -174,17 +160,15 @@ flowchart TD
 
 <v-click>
 
+- Total staked ETH (June 2026): $\approx \$40$ million (32 $\%$ of total ETH)
+- Total ETH in liquid staking $\approx 40\%$
+
+![stakinghistory](./images/solostakers.png){style="transform: translate(75%, 0%); width: 350px"}
+
+<v-click>
+
 - Derivative tokens (stETH, rETH) are productive in DeFi — collateral on Aave, traded on Uniswap
-<v-click>
 
-- LST market cap **Jan 2026**: $\approx \$70$bn (~$20\%$ of total ETH market cap)
-<v-click>
-
-- Now a large share of all staking
-
-![stakinghistory](./images/solostakers.png){style="transform: translate(5%, 0%); width: 800px"}
-
-</v-click>
 </v-click>
 </v-click>
 
@@ -201,18 +185,33 @@ What are the effects of liquid staking on the macroeconomics of blockchains?
 
 <v-click>
 
-<br><br>
+<div class="text-center text-2xl mt-12">
 
-<p style="text-align: center;"><h3> <u>Answers</u> <br>
+### <u>Answers</u>
 
-Tension between staked ETH and productive ETH is what makes issuance and slashing effective 
+Tension between productive ETH and staked ETH is what secures the blockchain: issuance and slashing are effective
+
+</div>
+
+</v-click>
+
+<v-click>
+
+<div class="text-center text-2xl mt-6">
 
 LSTs eliminate this tension $\implies$ issuance and slashing lose their effects
 
+</div>
+
+</v-click>
+
+<v-click>
+
+<div class="text-center text-2xl mt-6">
+
 Natural forces drive the system toward LSTs
 
-</h3>
-</p>
+</div>
 
 </v-click>
 
@@ -292,7 +291,7 @@ $$
 
 ---
 
-# Blockchain economy without liquid staking tokens
+# Dollar returns to investment
 
 ### Infinitesimal users take aggregates as given
 
@@ -302,6 +301,7 @@ $$
 <v-click>
 <br>
 
+<br><br>
 
 ### Dollar return to DeFi: $\small \qquad \qquad \qquad \qquad \qquad \underbrace{\mu^{\$}\,dt+\sigma^{\$}\,dW_{t}}_{\text{productivity rate}}-\underbrace{\frac{S_{t}}{D_t}\frac{dI_{t}^{\$}}{I_{t}^{\$}}}_{\text{issuance tax}}+\underbrace{\gamma\frac{S_{t}}{D_t+S_t}dN_{t}}_{\text{deflation}}$
 
@@ -311,44 +311,91 @@ $$
 
 ### Dollar return to staking: $\small \qquad \qquad \qquad \qquad \qquad \qquad  \underbrace{\frac{dI_{t}^{\$}}{I_{t}^{\$}}}_{\text{issuance}}-\underbrace{\gamma\frac{D_{t}}{D_t+S_t}dN_{t}}_{\text{slashing}}$
 
-<v-click>
-
-### Clearing & equilibrium
-- Only DeFi creates or destroys USD wealth
-- Staked ETH changes due to issuance
-- Aggregate demand for ETH = market cap of ETH
-
-</v-click>
 </v-click>
 </v-click>
 
 
 ---
 
-# Equilibrium
+#  Equilibrium 
+
+### Equilibrium definition
+- Only DeFi creates or destroys USD wealth 
+<v-click>
+
+- Staker holdings change due to issuance
+- DeFi holdings do not change due to issuance
+<v-click>
+
+- Aggregate demand for ETH = market cap of ETH
+<v-click>
+
+- Optimal investor behaviour consistent with aggregates
+
+<v-click>
+
+<br><br>
+
+### Equilibrium  (no staking)
+
+$$\small
+\begin{array}{rcll}
+\textbf{issuance policy} & : & \dfrac{dI_{t}}{I_{t}} & =\;\mu_{I,t}\,dt\\[8pt]
+\textbf{allocation} & : & \theta_{t}^{\star} & =\;\dfrac{\mu_{D}}{2\,\sigma_{D}^{2}}+\dfrac{1}{\sigma_{D}}\sqrt{\overline{\mu}_{I}-\mu_{I,t}}\qquad\quad\left(\overline{\mu}_{I}=\dfrac{\mu_{D}^{2}}{4\,\sigma_{D}^{2}}\right)\\[8pt]
+\textbf{ETH prices} & : & \mu_{P,t} & =\;\theta_{t}^{\star}\mu_{D}-\beta-(1-\theta_{t}^{\star})\mu_{I,t}\\[4pt]
+ & & \sigma_{P,t} & =\;\theta_{t}^{\star}\sigma_{D}
+\end{array}
+$$
+
+</v-click>
+</v-click>
+</v-click>
+</v-click>
+
+---
+
+# More generally
+
+
+
 $$\footnotesize
-\text{issuance tax policy}: \mu_{\iota}^{\$}\,dt+\sigma_{\iota}^{\$}\,dW_{t}+\gamma_{\iota}^{\$}\,dN_{t} \qquad \text{allocation } : \theta_D/\theta_S(\gamma, \mu_{\iota}^{\$}, \sigma_{\iota}^{\$}, \gamma_{\iota}^{\$}) \qquad \qquad \text{ETH prices: } \begin{cases}
-\text{drift}  & = \mu_P(\gamma, \mu_{\iota}^{\$}, \sigma_{\iota}^{\$}, \gamma_{\iota}^{\$})\\
-\\\text{productivity shocks}  & = \sigma_P(\gamma, \mu_{\iota}^{\$}, \sigma_{\iota}^{\$}, \gamma_{\iota}^{\$}) \\
-\\\text{slashing shocks} & =\gamma_P(\gamma, \mu_{\iota}^{\$}, \sigma_{\iota}^{\$}, \gamma_{\iota}^{\$})
+\text{issuance tax policy}: \quad \mu_{\iota}\,dt+\sigma_{\iota}\,dW_{t}+\gamma_{\iota}\,dN_{t} \qquad\qquad\qquad {\text{slashing rate}: \gamma}
+$$
+
+$$\footnotesize
+\text{allocation}: \theta_D(\gamma, \mu_{\iota}, \sigma_{\iota}, \gamma_{\iota}) \qquad\qquad \text{ETH prices}: \begin{cases}
+\text{drift}  & = \mu_P(\gamma, \mu_{\iota}, \sigma_{\iota}, \gamma_{\iota})\\
+\\\text{productivity shocks}  & = \sigma_P(\gamma, \mu_{\iota}, \sigma_{\iota}, \gamma_{\iota}) \\
+\\\text{slashing shocks} & =\gamma_P(\gamma, \mu_{\iota}, \sigma_{\iota}, \gamma_{\iota})
 \end{cases}
 $$
 
-<v-click>
 
-* <u>**Policy tools**</u> (slashing, issuance) affect USD wealth of users $\implies$ influence incentives $\implies$ **policy objectives** can be attained.
+<div v-click="1">
+
+<br><br>
+
+## $\implies$ Policy tools work
+Slashing and issuance policy affect USD wealth of users $\implies$ influence incentives $\implies$ **policy objectives** can be attained
+
+</div>
+
+---
+
+# Laffer curve
 
 
-<v-click>
 
-- <u>**Example**</u>: Laffer curve
+![laffer](./images/laffer.png){style="transform: translate(25%, 0%); width: 600px"}
 
-![laffer](./images/laffer.png){style="transform: translate(45%, 0%); width: 500px"}
+- issuance raises the tax on productive output 
 
-issuance raises the tax on productive output $\implies$ reduces productive ETH $\implies$ beyond a point, contraction of tax base dominates.
+$\implies$ reduces productive ETH 
+
+$\implies$ beyond a point, contraction of tax base dominates.
 
 
-</v-click>
+
 
 <!--<v-click>
 - <u>**Policy objective**</u>: ETH prices
@@ -362,7 +409,6 @@ $$
 </v-click> -->
 
 
-</v-click>
 
 
 ---
@@ -395,7 +441,6 @@ layout: two-cols-header
 ## Dollar returns:
 - Staking: $\qquad\qquad\quad\qquad\qquad\quad$ <u>**zero**</u>
 <br>
-<br>
 
 - DeFi: $\qquad\qquad\quad\qquad\qquad\underbrace{\mu^{\$}\,dt+\sigma^{\$}\,dZ_{t}}_{\text{productivity rate}}$
 
@@ -409,7 +454,6 @@ layout: two-cols-header
 * Protocol issues $1$ ETH. DeFi users holding LSTs are also stakers $\implies$ issuance spreads across all staked ETH
 
 * Stakers hold 1.5 ETH worth $\$\,1$, DeFi users (through LSTs) hold 1.5 ETH worth $\$\,1$
-
 
 **$\implies$ Issuance has no dollar effect, there is no tax**
 
@@ -467,7 +511,7 @@ section: With ETH and LSTs
   * Consumption (USD)
   * DeFi (with LSTs)
   * DeFi (with ETH)
-  * Staking
+  * Staking (with LSTs)
 
 <v-click>
 <br>
