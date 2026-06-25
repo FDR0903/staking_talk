@@ -22,15 +22,15 @@ date: '26/06/2026' # shows in infoLine, defaults to the current date
 mdc: true
 ---
 
-## These slides:  [faycaldrissi.com/staking_talk/](https://www.faycaldrissi.com/staking_talk/)
+## [faycaldrissi.com/staking_talk/](https://www.faycaldrissi.com/staking_talk/)
 
 <br>
 
-# Liquid Staking and the Limits of Policy
+# Liquid Staking <br> and <br> the Limits of Policy
 
-## Fayçal Drissi, Zachary Feinstein, Basil Williams
+## Fayçal Drissi $\quad$ $\quad$ Zachary Feinstein$\quad$$\quad$ Basil Williams
 
-### *University of Oxford, Stevens Institute of Technology, Imperial Business School*
+### *University of Oxford$\quad\quad\quad$ Stevens Institute $\quad\quad$ Imperial Business School*
 <br>
 
 <!--These slides: [https://www.faycaldrissi.com/siam2025](https://www.faycaldrissi.com/siam2025)
@@ -65,7 +65,7 @@ section: Motivation
 ### Decentralisation today
 - stablecoins market cap: $\$320$bn, crypto market cap: $\$2.63$trn
 - decentralised trading: $\$8.2$bn/day
-- lending/borrowing: $\$3$bn/day; 
+- lending/borrowing: $\$3$bn/day
 
 </v-click>
 </v-click>
@@ -340,8 +340,8 @@ $$
 
 $$\small
 \begin{array}{rcll}
-\textbf{issuance policy} & : & \dfrac{dI_{t}}{I_{t}} & =\;\mu_{I,t}\,dt\\[8pt]
-\textbf{allocation} & : & \theta_{t}^{\star} & =\;\dfrac{\mu_{D}}{2\,\sigma_{D}^{2}}+\dfrac{1}{\sigma_{D}}\sqrt{\overline{\mu}_{I}-\mu_{I,t}}\qquad\quad\left(\overline{\mu}_{I}=\dfrac{\mu_{D}^{2}}{4\,\sigma_{D}^{2}}\right)\\[8pt]
+\textbf{issuance policy} & : & {dI_{t}^{\$}}/{I_{t}^{\$}} & =\;\mu_{I,t}\,dt\\[8pt]
+\textbf{allocation to productive DeFi} & : & \theta_{t}^{\star} & =\;\dfrac{\mu_{D}}{2\,\sigma_{D}^{2}}+\dfrac{1}{\sigma_{D}}\sqrt{\overline{\mu}_{I}-\mu_{I,t}}\qquad\quad\left(\overline{\mu}_{I}=\dfrac{\mu_{D}^{2}}{4\,\sigma_{D}^{2}}\right)\\[8pt]
 \textbf{ETH prices} & : & \mu_{P,t} & =\;\theta_{t}^{\star}\mu_{D}-\beta-(1-\theta_{t}^{\star})\mu_{I,t}\\[4pt]
  & & \sigma_{P,t} & =\;\theta_{t}^{\star}\sigma_{D}
 \end{array}
@@ -384,7 +384,9 @@ Slashing and issuance policy affect USD wealth of users $\implies$ influence inc
 
 # Laffer curve
 
-
+$$\large
+\boxed{\ \text{staking return}\ =\ \text{productive base}\ \times\ \text{issuance tax rate}\ }
+$$
 
 ![laffer](./images/laffer.png){style="transform: translate(25%, 0%); width: 600px"}
 
@@ -539,12 +541,14 @@ $$
 $$
 - Staking with LSTs $\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad \text{issuance}$
 
+<v-click>
+
 - Correlation: accessibility to DeFi with LSTs
 $$
-\langle {\color{blue}W},{\color{red}Z}\rangle = \rho > 0
+\qquad\qquad\qquad\qquad\langle {\color{blue}W},{\color{red}Z}\rangle = \rho > 0
 $$
 
-
+</v-click>
 
 ---
 layout: two-cols-header
