@@ -572,6 +572,12 @@ layout: two-cols-header
 
 ---
 
+# Doable issuance shrinks with correlation
+
+![correleffect3](./images/correleffect3.jpg){style="display:block; margin: 0.5rem auto 0; width: 540px"}
+
+---
+
 # Strategic complementarity
 
 - DeFi with LSTs $\qquad\qquad\qquad\qquad\qquad\quad \underbrace{\mu^{\$}\,dt+{\color{red}\sigma^{\$}\,dZ_{t}}}_{\text{LST productivity rate}}-\underbrace{c\left(\text{LST}_t\right) dt}_{\text{endog liq cost stETH}}+\text{issuance}$
